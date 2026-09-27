@@ -25,7 +25,7 @@ public class ProdutoRequest {
     @Min(value = 0, message = "Quantidade não pode ser negativa")
     private Integer quantidadeEstoque;
 
-    @NotNull(message = "Categoria é obrigatória")
+    @NotNull(message = "CategoriaEntity é obrigatória")
     private CategoriaRequest categoria;
 
     @NotNull(message = "Fornecedor é obrigatório")

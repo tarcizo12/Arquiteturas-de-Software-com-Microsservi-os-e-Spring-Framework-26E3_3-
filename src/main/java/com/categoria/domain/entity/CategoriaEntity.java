@@ -1,12 +1,14 @@
-package com.gerenciador.estoque.domain.entity;
+package com.categoria.domain.entity;
 
+import com.gerenciador.estoque.domain.entity.Produto;
 import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "categorias")
-public class Categoria {
+public class CategoriaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,9 +22,9 @@ public class Categoria {
     @OneToMany(mappedBy = "categoria")
     private List<Produto> produtos = new ArrayList<>();
 
-    public Categoria() {}
+    public CategoriaEntity() {}
 
-    public Categoria(String nome, String descricao) {
+    public CategoriaEntity(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
     }

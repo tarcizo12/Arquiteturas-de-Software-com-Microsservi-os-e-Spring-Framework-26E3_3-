@@ -16,7 +16,7 @@ public class OpenApiConfig {
         return openApi -> {
             if (openApi.getComponents() != null && openApi.getComponents().getSchemas() != null) {
                 Map<String, Schema> schemas = openApi.getComponents().getSchemas();
-                schemas.remove("Categoria");
+                schemas.remove("CategoriaEntity");
                 schemas.remove("Fornecedor");
                 schemas.remove("Produto");
                 schemas.remove("ItemMovimentacao");

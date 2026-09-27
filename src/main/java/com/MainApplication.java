@@ -1,12 +1,12 @@
-package com.gerenciador.estoque;
+package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EstoqueApplication {
+public class MainApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EstoqueApplication.class, args);
+        SpringApplication.run(MainApplication.class, args);
     }
 }
