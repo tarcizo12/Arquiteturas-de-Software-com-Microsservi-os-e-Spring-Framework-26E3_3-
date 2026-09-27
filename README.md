@@ -1,4 +1,66 @@
-# Mapeamento da organização atual dos modulos e descrição de qual fucionalidade pode evoluir para um serviço proprio
+# Mapeamento da organização atual dos módulos e descrição de qual funcionalidade pode evoluir para um serviço próprio
+
+## Respostas ao exercício
+
+### Qual funcionalidade foi escolhida
+
+O módulo **`movimentacao`**, responsável pelo registro de entradas e saídas
+de estoque.
+
+### Qual é sua responsabilidade
+
+`movimentacao` registra **eventos de entrada e saída de estoque**: quem
+executou (`usuario`), o quê (lista de itens, cada um referenciando um
+`produto` e uma quantidade), quando (`dataHora`) e por quê (`observacao`).
+É um módulo essencialmente **transacional e de auditoria**: ele não é dono
+do dado de catálogo nem do estoque atual — ele é dono do *histórico* de
+mudanças de estoque, e é quem decide, a cada evento, como esse histórico
+afeta o saldo (soma numa `ENTRADA`, subtrai numa `SAIDA`, validando se há
+saldo suficiente).
+
+Detalhamento completo em [Módulo `movimentacao`](#módulo-movimentacao).
+
+### Por que ela poderia ser executada separadamente
+
+1. **Padrão de acesso diferente do resto do sistema.** O catálogo
+   (`produto`) é predominantemente lido; `movimentacao` é predominantemente
+   escrita — cada operação de estoque gera um novo registro. Isso justifica
+   escalar os dois de forma independente.
+2. **A fronteira de negócio já é clara no código.** `movimentacao` nunca
+   acessa `ProdutoRepository`/`UsuarioRepository` diretamente — toda
+   interação passa por `ProdutoService`/`UsuarioService`. Essa "API interna"
+   já é, na prática, o contrato que viraria uma chamada de rede (REST ou
+   mensageria) numa arquitetura de serviços.
+3. **A dependência é sempre em uma única direção.** `movimentacao` depende
+   de `produto` e `usuario`, nunca o contrário — o que evita dependência
+   circular quando um dos lados sai do monólito primeiro.
+4. **Tolera consistência eventual.** Diferente de consultar o catálogo (que
+   geralmente precisa responder na hora), registrar uma movimentação pode
+   ser processado de forma assíncrona sem impacto perceptível para quem
+   usa o sistema — cenário típico onde vale a pena separar um serviço.
+
+Justificativa completa, incluindo o que muda tecnicamente na extração, em
+[Por que este módulo é o principal candidato a virar um serviço separado](#por-que-este-módulo-é-o-principal-candidato-a-virar-um-serviço-separado).
+
+### Quais partes da aplicação atualmente dependem dela
+
+**Nenhuma.** Essa é uma característica intencional do desenho atual:
+`movimentacao` é sempre o módulo que **depende** dos outros (`produto` via
+`ProdutoService`, `usuario` via `UsuarioService`) e **nunca** o módulo do
+qual algo depende — com uma exceção: a camada `api`, que expõe seus
+endpoints REST. Ou seja:
+
+- `produto`, `categoria`, `fornecedor`, `usuario` → não dependem de
+  `movimentacao`.
+- `api` → depende de `movimentacao` apenas para expor as rotas de
+  movimentação via `MovimentacaoController`.
+
+Essa unidirecionalidade é o que viabiliza extrair `movimentacao` como
+serviço próprio sem precisar alterar nenhum outro módulo de negócio — só a
+camada `api` precisaria passar a chamar esse serviço por rede em vez de
+localmente.
+
+---
 
 # Mapa de dependências entre módulos
 
