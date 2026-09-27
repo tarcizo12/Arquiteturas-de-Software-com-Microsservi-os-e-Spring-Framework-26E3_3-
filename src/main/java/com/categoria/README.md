@@ -1,1 +1,0 @@
-# Pacote responsável pelo controle das categorias de produtos presentes do estoque
