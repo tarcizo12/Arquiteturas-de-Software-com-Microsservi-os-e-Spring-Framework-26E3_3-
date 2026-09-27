@@ -1,0 +1,572 @@
+{
+  "info": {
+    "_postman_id": "a87ace25-c5f5-4eac-bce4-3dac02721f3d",
+    "name": "Estoque API v2 - Etapa 4",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28723467"
+  },
+  "item": [
+    {
+      "name": "Produtos",
+      "item": [
+        {
+          "name": "GET",
+          "item": [
+            {
+              "name": "Listar todos (ordenados por nome)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Listar produtos com estoque baixo (limite=5)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos/estoque-baixo?limite=5",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos",
+                    "estoque-baixo"
+                  ],
+                  "query": [
+                    {
+                      "key": "limite",
+                      "value": "5"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Listar produtos por categoria (ID=1)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos/categoria/1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos",
+                    "categoria",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Listar produtos por fornecedor (ID=1)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos/fornecedor/1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos",
+                    "fornecedor",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Obter produto por ID (1)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos/1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "POST",
+          "item": [
+            {
+              "name": "Incluir produto não perecível (válido)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nome\": \"Monitor LED 24\\\"\",\n  \"descricao\": \"Monitor Full HD 24 polegadas\",\n  \"preco\": 899.90,\n  \"quantidadeEstoque\": 50,\n  \"categoria\": {\n    \"id\": 1,\n    \"nome\": \"Eletrônicos\",\n    \"descricao\": \"Equipamentos eletrônicos\"\n  },\n  \"fornecedor\": {\n    \"id\": 1,\n    \"nome\": \"Distribuidora São Paulo\",\n    \"cnpj\": \"12.345.678/0001-90\",\n    \"telefone\": \"(11) 99999-8888\",\n    \"email\": \"contato@distribuidora.com\",\n    \"endereco\": \"Rua das Flores, 123\"\n  },\n  \"perecivel\": false,\n  \"garantiaMeses\": 12\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Incluir produto perecível (válido)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nome\": \"Leite Integral 1L\",\n  \"descricao\": \"Leite integral pasteurizado\",\n  \"preco\": 4.50,\n  \"quantidadeEstoque\": 200,\n  \"categoria\": {\n    \"id\": 2,\n    \"nome\": \"Bebidas\",\n    \"descricao\": \"Produtos líquidos\"\n  },\n  \"fornecedor\": {\n    \"id\": 1,\n    \"nome\": \"Distribuidora São Paulo\",\n    \"cnpj\": \"12.345.678/0001-90\",\n    \"telefone\": \"(11) 99999-8888\",\n    \"email\": \"contato@distribuidora.com\",\n    \"endereco\": \"Rua das Flores, 123\"\n  },\n  \"perecivel\": true,\n  \"dataValidade\": \"2026-12-31\",\n  \"lote\": \"L12345\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "(Erro) Incluir produto sem categoria",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nome\": \"Produto sem categoria\",\n  \"preco\": 10.00,\n  \"quantidadeEstoque\": 5,\n  \"perecivel\": false,\n  \"garantiaMeses\": 6\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "PUT",
+          "item": [
+            {
+              "name": "Atualizar produto (ID=1)",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nome\": \"Monitor LED 27\\\" Atualizado\",\n  \"descricao\": \"Monitor Full HD 27 polegadas com 144Hz\",\n  \"preco\": 1299.90,\n  \"quantidadeEstoque\": 30,\n  \"categoria\": {\n    \"id\": 1,\n    \"nome\": \"Eletrônicos\",\n    \"descricao\": \"Equipamentos eletrônicos\"\n  },\n  \"fornecedor\": {\n    \"id\": 1,\n    \"nome\": \"Distribuidora São Paulo\",\n    \"cnpj\": \"12.345.678/0001-90\",\n    \"telefone\": \"(11) 99999-8888\",\n    \"email\": \"contato@distribuidora.com\",\n    \"endereco\": \"Rua das Flores, 123\"\n  },\n  \"perecivel\": false,\n  \"garantiaMeses\": 24\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos/1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "DELETE",
+          "item": [
+            {
+              "name": "Excluir produto (ID=1)",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/produtos/1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "produtos",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Movimentações",
+      "item": [
+        {
+          "name": "POST",
+          "item": [
+            {
+              "name": "Registrar entrada de produto (ID=1, qtd=10)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tipo\": \"ENTRADA\",\n  \"usuario\": {\n    \"id\": 1,\n    \"nome\": \"João Silva\",\n    \"login\": \"joao.silva\",\n    \"perfil\": \"OPERADOR\"\n  },\n  \"observacao\": \"Compra inicial\",\n  \"itens\": [\n    {\n      \"quantidade\": 10,\n      \"produto\": {\n        \"id\": 1\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/movimentacoes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "movimentacoes"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Registrar saída de produto (ID=1, qtd=5)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tipo\": \"SAIDA\",\n  \"usuario\": {\n    \"id\": 1,\n    \"nome\": \"João Silva\",\n    \"login\": \"joao.silva\",\n    \"perfil\": \"OPERADOR\"\n  },\n  \"observacao\": \"Venda para cliente\",\n  \"itens\": [\n    {\n      \"quantidade\": 5,\n      \"produto\": {\n        \"id\": 1\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/movimentacoes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "movimentacoes"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "(Erro) Saída com estoque insuficiente (qtd=999)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tipo\": \"SAIDA\",\n  \"usuario\": {\n    \"id\": 1,\n    \"nome\": \"João Silva\",\n    \"login\": \"joao.silva\",\n    \"perfil\": \"OPERADOR\"\n  },\n  \"observacao\": \"Tentativa de venda acima do estoque\",\n  \"itens\": [\n    {\n      \"quantidade\": 999,\n      \"produto\": {\n        \"id\": 1\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/movimentacoes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "movimentacoes"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "(Erro) Produto vencido (ID=2, data passada)",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tipo\": \"SAIDA\",\n  \"usuario\": {\n    \"id\": 1,\n    \"nome\": \"João Silva\",\n    \"login\": \"joao.silva\",\n    \"perfil\": \"OPERADOR\"\n  },\n  \"observacao\": \"Tentativa de vender produto vencido\",\n  \"itens\": [\n    {\n      \"quantidade\": 1,\n      \"produto\": {\n        \"id\": 2\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/movimentacoes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "movimentacoes"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "GET",
+          "item": [
+            {
+              "name": "Listar todas as movimentações",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/movimentacoes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "movimentacoes"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Obter movimentação por ID (1)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/movimentacoes/1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "movimentacoes",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cenários de Erro (Validação e Regras)",
+      "item": [
+        {
+          "name": "Produto sem nome (validação)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"\",\n  \"descricao\": \"Produto sem nome\",\n  \"preco\": 10.00,\n  \"quantidadeEstoque\": 5,\n  \"categoria\": {\n    \"id\": 1\n  },\n  \"fornecedor\": {\n    \"id\": 1\n  },\n  \"perecivel\": false,\n  \"garantiaMeses\": 6\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/produtos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Produto com preço negativo (validação)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Produto com preço negativo\",\n  \"preco\": -10.00,\n  \"quantidadeEstoque\": 5,\n  \"categoria\": {\n    \"id\": 1\n  },\n  \"fornecedor\": {\n    \"id\": 1\n  },\n  \"perecivel\": false,\n  \"garantiaMeses\": 6\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/produtos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Movimentação sem itens (validação)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tipo\": \"ENTRADA\",\n  \"usuario\": {\n    \"id\": 1\n  },\n  \"observacao\": \"Movimentação vazia\",\n  \"itens\": []\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/movimentacoes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "movimentacoes"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
