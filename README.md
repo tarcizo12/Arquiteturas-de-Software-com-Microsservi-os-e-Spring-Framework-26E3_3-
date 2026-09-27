@@ -1,4 +1,6 @@
-## Mapa de dependências entre módulos
+# Mapeamento da organização atual dos modulos e descrição de qual fucionalidade pode evoluir para um serviço proprio
+
+# Mapa de dependências entre módulos
 
 ```
 categoria   fornecedor   usuario
