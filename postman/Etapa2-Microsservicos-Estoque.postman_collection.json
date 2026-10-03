@@ -2,6 +2,7 @@
   "info": {
     "name": "Etapa 2 - Microsserviços de Estoque",
     "_postman_id": "etapa2-movimentacao",
+    "description": "Testes da aplicação principal e do microsserviço independente de movimentações de estoque.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -16,7 +17,7 @@
   ],
   "item": [
     {
-      "name": "1 - Serviço isolado - POST movimentação",
+      "name": "1 - Serviço de Movimentação - POST",
       "request": {
         "method": "POST",
         "header": [
@@ -29,11 +30,20 @@
           "mode": "raw",
           "raw": "{\n  \"tipo\": \"ENTRADA\",\n  \"idUsuarioResponsavel\": 1,\n  \"nomeUsuario\": \"Administrador\",\n  \"observacao\": \"Teste isolado do microsserviço\",\n  \"itens\": [\n    {\n      \"idProduto\": 1,\n      \"quantidade\": 5\n    }\n  ]\n}"
         },
-        "url": "{{movimentacao}}/api/movimentacoes"
+        "url": {
+          "raw": "{{movimentacao}}/api/movimentacoes",
+          "host": [
+            "{{movimentacao}}"
+          ],
+          "path": [
+            "api",
+            "movimentacoes"
+          ]
+        }
       }
     },
     {
-      "name": "2 - Principal - POST via Feign",
+      "name": "2 - Principal - POST movimentação via Feign",
       "request": {
         "method": "POST",
         "header": [
@@ -46,25 +56,110 @@
           "mode": "raw",
           "raw": "{\n  \"tipo\": \"SAIDA\",\n  \"idUsuarioResponsavel\": 1,\n  \"observacao\": \"Teste de comunicação HTTP via OpenFeign\",\n  \"itens\": [\n    {\n      \"idProduto\": 1,\n      \"quantidade\": 2\n    }\n  ]\n}"
         },
-        "url": "{{principal}}/api/movimentacoes"
+        "url": {
+          "raw": "{{principal}}/com/api/produtos/movimentacoes",
+          "host": [
+            "{{principal}}"
+          ],
+          "path": [
+            "com",
+            "api",
+            "produtos",
+            "movimentacoes"
+          ]
+        }
       }
     },
     {
-      "name": "3 - Principal - consultar produto/estoque",
+      "name": "3 - Principal - GET produto/estoque",
       "request": {
         "method": "GET",
-        "url": "{{principal}}/api/produtos/1"
+        "url": {
+          "raw": "{{principal}}/com/api/produtos/1",
+          "host": [
+            "{{principal}}"
+          ],
+          "path": [
+            "com",
+            "api",
+            "produtos",
+            "1"
+          ]
+        }
       }
     },
     {
-      "name": "4 - Serviço - listar histórico",
+      "name": "4 - Principal - GET histórico de movimentações",
       "request": {
         "method": "GET",
-        "url": "{{movimentacao}}/api/movimentacoes"
+        "url": {
+          "raw": "{{principal}}/com/api/produtos/movimentacoes",
+          "host": [
+            "{{principal}}"
+          ],
+          "path": [
+            "com",
+            "api",
+            "produtos",
+            "movimentacoes"
+          ]
+        }
       }
     },
     {
-      "name": "5 - Serviço indisponível - Principal POST",
+      "name": "5 - Principal - GET movimentação por ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{principal}}/com/api/produtos/movimentacoes/1",
+          "host": [
+            "{{principal}}"
+          ],
+          "path": [
+            "com",
+            "api",
+            "produtos",
+            "movimentacoes",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "6 - Serviço de Movimentação - GET histórico",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{movimentacao}}/api/movimentacoes",
+          "host": [
+            "{{movimentacao}}"
+          ],
+          "path": [
+            "api",
+            "movimentacoes"
+          ]
+        }
+      }
+    },
+    {
+      "name": "7 - Serviço de Movimentação - GET por ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{movimentacao}}/api/movimentacoes/1",
+          "host": [
+            "{{movimentacao}}"
+          ],
+          "path": [
+            "api",
+            "movimentacoes",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "8 - Serviço indisponível - Principal POST",
       "request": {
         "method": "POST",
         "header": [
@@ -77,7 +172,18 @@
           "mode": "raw",
           "raw": "{\n  \"tipo\": \"ENTRADA\",\n  \"idUsuarioResponsavel\": 1,\n  \"observacao\": \"Deve resultar em 503 se o serviço estiver parado\",\n  \"itens\": [\n    {\n      \"idProduto\": 1,\n      \"quantidade\": 1\n    }\n  ]\n}"
         },
-        "url": "{{principal}}/api/movimentacoes"
+        "url": {
+          "raw": "{{principal}}/com/api/produtos/movimentacoes",
+          "host": [
+            "{{principal}}"
+          ],
+          "path": [
+            "com",
+            "api",
+            "produtos",
+            "movimentacoes"
+          ]
+        }
       }
     }
   ]
