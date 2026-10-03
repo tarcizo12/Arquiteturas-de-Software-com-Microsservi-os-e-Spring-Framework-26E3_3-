@@ -1,0 +1,12 @@
+ETAPA 2 - EXECUÇÃO
+
+Terminal 1:
+cd servico-movimentacao
+mvnw.cmd spring-boot:run
+
+Terminal 2:
+cd aplicacao-principal
+mvnw.cmd spring-boot:run
+
+Se o Maven Wrapper não estiver disponível, use:
+mvn spring-boot:run

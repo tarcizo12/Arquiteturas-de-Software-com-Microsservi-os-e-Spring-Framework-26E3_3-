@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a73189e-cda6-4687-861a-694c03ee9a64" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTEXTO_DO_PROJETO.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Colecao_Postma_Api_core.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagrama-entidades.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/MainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/config/DataInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/controller/MovimentacaoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/controller/ProdutoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/exception/EntradaInvalidaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/exception/ErroResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/exception/EstoqueInsuficienteException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/exception/RegistroNaoLocalizadoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/swagger/MovimentacaoControllerDocs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/swagger/ProdutoControllerDocs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/categoria/domain/dto/CategoriaRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/categoria/domain/entity/CategoriaEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/categoria/domain/enums/TipoMovimentacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/categoria/repository/CategoriaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/categoria/service/CategoriaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fornecedor/domain/dto/FornecedorRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fornecedor/domain/entity/FornecedorEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fornecedor/domain/enums/TipoMovimentacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fornecedor/repository/FornecedorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fornecedor/service/FornecedorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movimentacao/domain/dto/ItemMovimentacaoRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movimentacao/domain/dto/MovimentacaoRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movimentacao/domain/entity/ItemMovimentacaoEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movimentacao/domain/entity/MovimentacaoEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movimentacao/domain/enums/TipoMovimentacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movimentacao/repository/ItemMovimentacaoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movimentacao/repository/MovimentacaoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movimentacao/service/MovimentacaoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/produto/domain/dto/ProdutoRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/produto/domain/dto/ProdutoResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/produto/domain/entity/ProdutoEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/produto/domain/entity/ProdutoNaoPerecivel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/produto/domain/entity/ProdutoPerecivel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/produto/domain/enums/TipoMovimentacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/produto/repository/ProdutoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/produto/service/ProdutoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/usuario/domain/dto/UsuarioRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/usuario/domain/entity/UsuarioEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/usuario/domain/enums/TipoMovimentacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/usuario/repository/UsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/usuario/service/UsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3JvInHW99hiico6BW6glk1Rah58" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tarci/OneDrive/Área de Trabalho/Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-/src/main/java/com/usuario&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tarci\OneDrive\Área de Trabalho\Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-\src\main\java\com\usuario" />
+      <recent name="C:\Users\tarci\OneDrive\Área de Trabalho\Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-\src\main\java\com\produto" />
+      <recent name="C:\Users\tarci\OneDrive\Área de Trabalho\Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-\src\main\java\com\movimentacao" />
+      <recent name="C:\Users\tarci\OneDrive\Área de Trabalho\Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-\src\main\java\com\produto\domain\dto" />
+      <recent name="C:\Users\tarci\OneDrive\Área de Trabalho\Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-\src\main\java\com\produto\domain\entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tarci\OneDrive\Área de Trabalho\Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.movimentacao.domain.entity" />
+      <recent name="com.movimentacao.repository" />
+      <recent name="com.movimentacao.domain.dto" />
+      <recent name="com.api.exception" />
+      <recent name="com.produto.repository" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.MainApplication" />
+      <module name="estoque" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a73189e-cda6-4687-861a-694c03ee9a64" name="Changes" comment="" />
+      <created>1790535281099</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790535281099</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/produto/service/ProdutoService.java</url>
+          <line>217</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

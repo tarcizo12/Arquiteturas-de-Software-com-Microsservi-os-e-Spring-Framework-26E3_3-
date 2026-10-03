@@ -1,335 +1,88 @@
-# Mapeamento da organização atual dos módulos e descrição de qual funcionalidade pode evoluir para um serviço próprio
+# Etapa 2 — Microsserviço de Movimentação
 
-## Respostas ao exercício
+Projeto preparado a partir da análise do repositório da Etapa 1:
 
-### Qual funcionalidade foi escolhida
+`tarcizo12/Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-`
 
-O módulo **`movimentacao`**, responsável pelo registro de entradas e saídas
-de estoque.
+## Decisão arquitetural
 
-### Qual é sua responsabilidade
+A Etapa 1 já identificava `movimentacao` como principal candidata a uma extração. Nesta entrega, somente essa responsabilidade foi separada.
 
-`movimentacao` registra **eventos de entrada e saída de estoque**: quem
-executou (`usuario`), o quê (lista de itens, cada um referenciando um
-`produto` e uma quantidade), quando (`dataHora`) e por quê (`observacao`).
-É um módulo essencialmente **transacional e de auditoria**: ele não é dono
-do dado de catálogo nem do estoque atual — ele é dono do *histórico* de
-mudanças de estoque, e é quem decide, a cada evento, como esse histórico
-afeta o saldo (soma numa `ENTRADA`, subtrai numa `SAIDA`, validando se há
-saldo suficiente).
-
-Detalhamento completo em [Módulo `movimentacao`](#módulo-movimentacao).
-
-### Por que ela poderia ser executada separadamente
-
-1. **Padrão de acesso diferente do resto do sistema.** O catálogo
-   (`produto`) é predominantemente lido; `movimentacao` é predominantemente
-   escrita — cada operação de estoque gera um novo registro. Isso justifica
-   escalar os dois de forma independente.
-2. **A fronteira de negócio já é clara no código.** `movimentacao` nunca
-   acessa `ProdutoRepository`/`UsuarioRepository` diretamente — toda
-   interação passa por `ProdutoService`/`UsuarioService`. Essa "API interna"
-   já é, na prática, o contrato que viraria uma chamada de rede (REST ou
-   mensageria) numa arquitetura de serviços.
-3. **A dependência é sempre em uma única direção.** `movimentacao` depende
-   de `produto` e `usuario`, nunca o contrário — o que evita dependência
-   circular quando um dos lados sai do monólito primeiro.
-4. **Tolera consistência eventual.** Diferente de consultar o catálogo (que
-   geralmente precisa responder na hora), registrar uma movimentação pode
-   ser processado de forma assíncrona sem impacto perceptível para quem
-   usa o sistema — cenário típico onde vale a pena separar um serviço.
-
-Justificativa completa, incluindo o que muda tecnicamente na extração, em
-[Por que este módulo é o principal candidato a virar um serviço separado](#por-que-este-módulo-é-o-principal-candidato-a-virar-um-serviço-separado).
-
-### Quais partes da aplicação atualmente dependem dela
-
-**Nenhuma.** Essa é uma característica intencional do desenho atual:
-`movimentacao` é sempre o módulo que **depende** dos outros (`produto` via
-`ProdutoService`, `usuario` via `UsuarioService`) e **nunca** o módulo do
-qual algo depende — com uma exceção: a camada `api`, que expõe seus
-endpoints REST. Ou seja:
-
-- `produto`, `categoria`, `fornecedor`, `usuario` → não dependem de
-  `movimentacao`.
-- `api` → depende de `movimentacao` apenas para expor as rotas de
-  movimentação via `MovimentacaoController`.
-
-Essa unidirecionalidade é o que viabiliza extrair `movimentacao` como
-serviço próprio sem precisar alterar nenhum outro módulo de negócio — só a
-camada `api` precisaria passar a chamar esse serviço por rede em vez de
-localmente.
-
----
-
-# Mapa de dependências entre módulos
-
-```
-categoria   fornecedor   usuario
-    \           |           |
-     \          |           |  (via service, nunca repository)
-      v         v           v
-          produto  <----  movimentacao
-              ^
+```text
+Cliente HTTP
+    |
+    v
+Aplicação Principal :8080
+    |
+    +--> Produto / Usuário / Catálogo
+    |
+    +--> MovimentacaoGatewayService
               |
-             api  (depende de todos; nenhum módulo de negócio depende de api)
+              v
+        OpenFeign / HTTP
+              |
+              v
+Serviço de Movimentação :8081
+    |
+    +--> Controller
+    +--> Service
+    +--> Repository
+    +--> H2 próprio
 ```
 
-## Módulo `produto`
+## Requisitos atendidos
 
-### Papel no negócio
+| Requisito | Implementação |
+|---|---|
+| Aplicação principal + serviço independente | `aplicacao-principal` e `servico-movimentacao` |
+| Responsabilidade clara | Registro/consulta do histórico de movimentações |
+| API REST | `POST`, `GET`, `GET /{id}` |
+| DTOs | Requests/responses próprios em cada aplicação |
+| OpenAPI/Swagger | SpringDoc nos dois projetos |
+| OpenFeign | `MovimentacaoClient` na aplicação principal |
+| URL externa configurável | `servico.movimentacao.url` |
+| Comunicação fora do Controller | `MovimentacaoGatewayService` |
+| Tratamento de indisponibilidade | HTTP 503, sem expor exceção Feign |
+| Banco independente | H2 separado por aplicação |
+| Testes manuais | Coleção Postman em `postman/` |
+| Execução separada | portas 8080 e 8081 |
 
-`produto` é o **núcleo do catálogo** e a **fonte de verdade do estoque**. Ele
-não é só um CRUD de cadastro: é o módulo que decide se um produto pode ou não
-ser movimentado, e é o único lugar do sistema autorizado a alterar a
-quantidade em estoque de um produto — mesmo quando quem pede a alteração é
-outro módulo (`movimentacao`).
+## Execução
 
-### Modelo de domínio
+Abra dois terminais.
 
-`ProdutoEntity` é abstrata e usa herança `SINGLE_TABLE` (`tipo_produto` como
-discriminator) com duas especializações:
+### Terminal 1
 
-- **`ProdutoPerecivel`**: acrescenta `dataValidade` e `lote`. Sua regra de
-  `isValido()` inclui não estar vencido.
-- **`ProdutoNaoPerecivel`**: acrescenta `garantiaMeses`.
+```bash
+cd servico-movimentacao
+mvn spring-boot:run
+```
 
-Essa divisão existe porque as duas categorias de produto têm regras de
-validade diferentes, mas compartilham tudo o resto (nome, preço, estoque,
-categoria, fornecedor) — daí a escolha por herança em vez de dois agregados
-separados.
+### Terminal 2
 
-`produto` tem relação `@ManyToOne` com `categoria` e `fornecedor`
-(módulos auxiliares, só leitura de cadastro).
+```bash
+cd aplicacao-principal
+mvn spring-boot:run
+```
 
-### Responsabilidades do `ProdutoService`
+Acesse:
+- Principal Swagger: `http://localhost:8080/swagger-ui.html`
+- Serviço Swagger: `http://localhost:8081/swagger-ui.html`
 
-1. **CRUD do catálogo**: incluir, alterar, excluir, listar (por categoria,
-   por fornecedor, todos ordenados por nome, com estoque baixo).
-2. **Validação de regra por tipo**: perecível exige `dataValidade` + `lote`;
-   não perecível exige `garantiaMeses`. Essa validação não dá pra fazer só
-   com Bean Validation porque é condicional a outro campo (`perecivel`), por
-   isso vive no service.
-3. **Guarda contra troca de tipo em update**: uma vez criado como perecível
-   ou não perecível, o produto não pode trocar de tipo num `alterar()` — o
-   discriminator column da herança `SINGLE_TABLE` não foi feito pra isso.
-4. **Porta de entrada para outros módulos mexerem no estoque**, via dois
-   métodos pensados especificamente para uso por `movimentacao`:
-    - `buscarEntidadeParaMovimentacao(idProduto)`: busca e valida
-      (`isValido()`) o produto antes de qualquer movimentação.
-    - `atualizarEstoque(produto, novaQuantidade)`: única forma permitida de
-      persistir uma mudança de `quantidadeEstoque`.
+## Demonstração recomendada
 
-   Esses dois métodos existem para que `movimentacao` **nunca** precise
-   conhecer `ProdutoRepository`. Toda regra de "o que torna um produto apto a
-   ser movimentado" fica centralizada aqui, não espalhada pelo módulo que
-   está registrando a movimentação.
+1. Com os dois serviços ativos, execute `POST /api/movimentacoes` pela aplicação principal.
+2. Confirme `201 Created`.
+3. Consulte `GET /api/movimentacoes` no serviço de movimentação e confirme que o registro existe.
+4. Consulte `GET /api/produtos/1` na principal e observe o estoque alterado.
+5. Pare o serviço de movimentação.
+6. Repita o POST na principal.
+7. A aplicação principal deve responder `503 Service Unavailable` com mensagem amigável.
 
-### Por que o estoque mora aqui, e não em `movimentacao`
+## Relação com a Etapa 1
 
-`quantidadeEstoque` é um atributo do produto, não da movimentação — a
-movimentação é o *evento* que causa a mudança, não o dono do dado. Manter o
-estoque em `produto` significa que qualquer consulta de "quanto tem em
-estoque agora" lê direto do catálogo, sem precisar somar histórico de
-movimentações.
+O repositório original documentava `movimentacao` como módulo de responsabilidade própria e explicitava que a comunicação com produto/usuário passaria por services. A Etapa 2 muda a fronteira de processo: a chamada que era interna passa a ser uma chamada HTTP por OpenFeign.
 
-### Este módulo tende a virar o serviço principal (Consultar Produtos)
+## Observação
 
-Na evolução planejada da arquitetura, `produto` (com `categoria` e
-`fornecedor` fortemente acoplados a ele) é o candidato natural a se tornar
-**o serviço principal** do sistema — o "Consultar Produtos" — enquanto
-`movimentacao` sai como um serviço à parte que **consome** esse serviço (ver
-seção seguinte). Por isso os dois métodos citados acima já foram desenhados
-como uma fronteira de API clara: o dia que `movimentacao` virar um serviço
-externo, esses dois métodos do `ProdutoService` são exatamente o que vira
-endpoint HTTP (ex.: `GET /produtos/{id}/elegibilidade-movimentacao` e
-`PATCH /produtos/{id}/estoque`).
-
-### Dependências
-
-- Depende de: `categoria`, `fornecedor` (leitura de cadastro).
-- É consumido por: `movimentacao` (via `ProdutoService`), `api`.
-- **Não depende de `movimentacao`** — a dependência é sempre nessa direção
-  (movimentação conhece produto, produto não conhece movimentação). Isso é
-  o que torna a extração futura possível sem dependência circular.
-
----
-
-## Módulo `movimentacao`
-
-### Papel no negócio
-
-`movimentacao` registra **eventos de entrada e saída de estoque**: quem
-(`usuario`), o quê (lista de `ItemMovimentacao`, cada um referenciando um
-`produto` e uma quantidade), quando (`dataHora`) e por quê (`observacao`).
-É um módulo essencialmente **transacional e de auditoria** — ele não é dono
-de dado de catálogo nem de estoque atual, ele é dono do *histórico* de
-mudanças de estoque.
-
-### Modelo de domínio
-
-- `MovimentacaoEntity`: cabeçalho da movimentação (`tipo` — `ENTRADA`/`SAIDA`,
-  `dataHora`, `observacao`, `usuario`) e a lista de itens, adicionada via
-  `adicionarItem(ItemMovimentacao)`.
-- `ItemMovimentacaoEntity`: quantidade movimentada de um produto específico
-  dentro daquela movimentação.
-- `TipoMovimentacao` (enum): `ENTRADA` soma ao estoque, `SAIDA` subtrai.
-
-### Responsabilidades do `MovimentacaoService`
-
-1. Validar a requisição (usuário informado, tipo informado, pelo menos um
-   item, quantidade válida por item).
-2. Para cada item: pedir ao `produto` (via `ProdutoService`, nunca via
-   repository) se o produto existe e está apto a ser movimentado, calcular a
-   nova quantidade de estoque (soma se `ENTRADA`, subtrai com checagem de
-   estoque suficiente se `SAIDA`) e mandar persistir essa nova quantidade —
-   quem persiste é o `ProdutoService`, `movimentacao` só decide o número.
-3. Montar e persistir a própria entidade `MovimentacaoEntity` (isso sim é
-   responsabilidade exclusiva deste módulo).
-4. Consultas de histórico: listar todas, obter por id.
-
-A **regra de cálculo de saldo** (`ENTRADA` soma, `SAIDA` subtrai e valida se
-há saldo suficiente) vive em `movimentacao`, não em `produto` — porque essa
-regra é sobre *como interpretar um evento de movimentação*, não sobre o
-produto em si. Já a regra "esse produto pode ser mexido?" (vencido,
-inválido) vive em `produto`, porque é uma regra sobre o produto,
-independente de quem está perguntando.
-
-### Por que este módulo é o principal candidato a virar um serviço separado
-
-A ideia é `movimentacao` se tornar, no futuro, **um serviço à parte do
-serviço principal** (que seria o de consulta de produtos). Isso faz sentido
-técnico e de negócio pelos seguintes motivos:
-
-1. **Padrão de acesso diferente.** `produto` é predominantemente lido
-   (consultas de catálogo, telas de listagem); `movimentacao` é
-   predominantemente escrito (cada operação de estoque gera um novo
-   registro). Volumes e picos de carga de escrita/leitura são diferentes o
-   suficiente para justificar escalar os dois de forma independente.
-2. **Fronteira de negócio já é clara no código.** `movimentacao` nunca
-   acessa `ProdutoRepository`/`UsuarioRepository` diretamente — toda
-   interação passa por `ProdutoService`/`UsuarioService`. Ou seja, a "API
-   interna" que `movimentacao` usa hoje já é, na prática, o contrato que
-   viraria uma chamada de rede (REST ou mensageria) numa arquitetura de
-   serviços.
-3. **Direção única de dependência.** `movimentacao` depende de `produto` e
-   `usuario`, nunca o contrário. Isso evita dependência circular quando um
-   dos dois lados sai do monólito primeiro.
-4. **Consistência pode ser eventual sem quebrar o negócio.** Diferente de
-   "consultar o catálogo", que geralmente precisa responder na hora,
-   registrar uma movimentação pode tolerar ser processado de forma
-   assíncrona (fila) sem impacto perceptível pro usuário — o que é o
-   cenário típico onde vale a pena separar um serviço.
-
-#### O que muda tecnicamente na extração
-
-Quando `movimentacao` virar um serviço externo:
-
-- As duas chamadas Java `produtoService.buscarEntidadeParaMovimentacao(...)`
-  e `produtoService.atualizarEstoque(...)` viram chamadas HTTP (ou eventos)
-  para o serviço "Consultar Produtos" — por isso elas já foram isoladas como
-  métodos específicos no `ProdutoService`, em vez de `movimentacao` acessar
-  `ProdutoEntity`/`ProdutoRepository` livremente.
-- `usuarioService.getUsuarioById(...)` vira, da mesma forma, uma chamada
-  para onde quer que a identidade do usuário passe a viver (pode continuar
-  no monólito principal ou virar um serviço de identidade próprio,
-  dependendo da evolução).
-- `movimentacao` passa a ter seu próprio banco (ou schema), guardando
-  `MovimentacaoEntity`/`ItemMovimentacaoEntity`, e talvez precise de uma
-  cópia mínima/cache dos dados de produto que usa com mais frequência
-  (nome, se é perecível) para não depender de uma chamada de rede em toda
-  leitura de histórico.
-- Precisa decidir consistência: se a chamada para debitar estoque falhar
-  depois da movimentação já estar gravada (ou vice-versa), qual lado é a
-  fonte de verdade e como reconciliar — hoje isso é resolvido de graça pela
-  transação `@Transactional` local; separado em serviços, vira o principal
-  problema de design a resolver (saga, outbox, etc.).
-
-### Dependências
-
-- Depende de: `produto` (via `ProdutoService`), `usuario` (via
-  `UsuarioService`).
-- É consumido por: `api`.
-- Ninguém depende de `movimentacao` — é sempre o módulo que "puxa" dados dos
-  outros, nunca o contrário. Essa unidirecionalidade é o que viabiliza a
-  extração futura sem reescrever `produto`/`usuario`.
-
----
-
-## Módulo `categoria`
-
-### Papel no negócio
-
-Cadastro simples de categorias de produto (ex.: "Bebidas", "Limpeza"). É um
-módulo de apoio: existe pra dar contexto ao catálogo, não tem regra de
-negócio própria além de CRUD básico.
-
-### Modelo de domínio
-
-`CategoriaEntity`: `id`, `nome`, `descricao`, e a coleção `produtos`
-(`@OneToMany(mappedBy = "categoria")`) — usada só para o mapeamento JPA
-funcionar, nunca navegada diretamente por outro módulo (ver nota no início
-sobre isso).
-
-### Dependências
-
-- Não depende de nenhum outro módulo de negócio.
-- É consumido por: `produto` (relação `@ManyToOne`), `api`.
-
----
-
-## Módulo `fornecedor`
-
-### Papel no negócio
-
-Cadastro de fornecedores (`nome`, `cnpj`, `telefone`, `email`, `endereco`).
-Assim como `categoria`, é um módulo de apoio ao catálogo, sem regra de
-negócio própria além de CRUD.
-
-### Dependências
-
-- Não depende de nenhum outro módulo de negócio.
-- É consumido por: `produto` (relação `@ManyToOne`), `api`.
-
----
-
-## Módulo `usuario`
-
-### Papel no negócio
-
-Identifica quem executa uma ação no sistema — hoje, especificamente, quem
-registra uma movimentação de estoque (`nome`, `login`, `senha`, `perfil`).
-
-### Dependências
-
-- Não depende de nenhum outro módulo de negócio.
-- É consumido por: `movimentacao` (via `UsuarioService`, para saber o
-  responsável por cada movimentação), `api`.
-
-### Observação para evolução futura
-
-Se `movimentacao` for extraído como serviço separado, vale decidir nesse
-momento se `usuario` continua como parte do serviço principal (produto) ou
-se evolui para um serviço de identidade/autenticação próprio, compartilhado
-por ambos os serviços.
-
----
-
-## Camada `api`
-
-### Papel no negócio
-
-Não é um módulo de negócio — é a **camada transversal de entrada** da
-aplicação: controllers REST, configuração (`config`), exceções HTTP
-(`exception`) e documentação Swagger (`swagger`). É aqui que os módulos de
-negócio são compostos para atender uma requisição.
-
-### Regra de dependência
-
-`api` é o único pacote que pode depender de **todos** os módulos de negócio
-(`produto`, `movimentacao`, `categoria`, `fornecedor`, `usuario`). O inverso
-nunca acontece: nenhum `XxxService` de módulo de negócio pode importar algo
-de `com.api`. Isso mantém os módulos de negócio testáveis e reutilizáveis
-independente de estarem expostos via REST, e é o que garante que, se
-`movimentacao` virar um serviço externo, ele leve consigo sua própria camada
-`api` sem arrastar nada do restante do monólito.
+A regra de saldo permanece na aplicação principal nesta etapa. Assim, o microsserviço extraído é responsável pelo histórico de movimentações, enquanto o serviço principal continua sendo a fonte do estoque atual. Isso evita transformar toda a aplicação em microsserviços e mantém o escopo pedido na atividade.

@@ -1,0 +1,84 @@
+{
+  "info": {
+    "name": "Etapa 2 - Microsserviços de Estoque",
+    "_postman_id": "etapa2-movimentacao",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "principal",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "movimentacao",
+      "value": "http://localhost:8081"
+    }
+  ],
+  "item": [
+    {
+      "name": "1 - Serviço isolado - POST movimentação",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tipo\": \"ENTRADA\",\n  \"idUsuarioResponsavel\": 1,\n  \"nomeUsuario\": \"Administrador\",\n  \"observacao\": \"Teste isolado do microsserviço\",\n  \"itens\": [\n    {\n      \"idProduto\": 1,\n      \"quantidade\": 5\n    }\n  ]\n}"
+        },
+        "url": "{{movimentacao}}/api/movimentacoes"
+      }
+    },
+    {
+      "name": "2 - Principal - POST via Feign",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tipo\": \"SAIDA\",\n  \"idUsuarioResponsavel\": 1,\n  \"observacao\": \"Teste de comunicação HTTP via OpenFeign\",\n  \"itens\": [\n    {\n      \"idProduto\": 1,\n      \"quantidade\": 2\n    }\n  ]\n}"
+        },
+        "url": "{{principal}}/api/movimentacoes"
+      }
+    },
+    {
+      "name": "3 - Principal - consultar produto/estoque",
+      "request": {
+        "method": "GET",
+        "url": "{{principal}}/api/produtos/1"
+      }
+    },
+    {
+      "name": "4 - Serviço - listar histórico",
+      "request": {
+        "method": "GET",
+        "url": "{{movimentacao}}/api/movimentacoes"
+      }
+    },
+    {
+      "name": "5 - Serviço indisponível - Principal POST",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tipo\": \"ENTRADA\",\n  \"idUsuarioResponsavel\": 1,\n  \"observacao\": \"Deve resultar em 503 se o serviço estiver parado\",\n  \"itens\": [\n    {\n      \"idProduto\": 1,\n      \"quantidade\": 1\n    }\n  ]\n}"
+        },
+        "url": "{{principal}}/api/movimentacoes"
+      }
+    }
+  ]
+}
