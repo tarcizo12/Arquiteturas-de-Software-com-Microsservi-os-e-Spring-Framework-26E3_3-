@@ -45,8 +45,7 @@ CREATE TABLE IF NOT EXISTS fornecedor (
     telefone  VARCHAR(20)  NULL,
     email     VARCHAR(150) NULL,
     endereco  VARCHAR(255) NULL,
-    PRIMARY KEY (id),
-    UNIQUE KEY uk_fornecedor_cnpj (cnpj)
+    PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS usuario (

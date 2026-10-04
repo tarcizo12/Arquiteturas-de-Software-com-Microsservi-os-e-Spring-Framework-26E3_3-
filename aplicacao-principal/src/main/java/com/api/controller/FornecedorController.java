@@ -1,15 +1,15 @@
 package com.api.controller;
 
+import com.fornecedor.domain.dto.FornecedorResponse;
 import com.fornecedor.service.FornecedorService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/com/api/fornecedores")
@@ -29,5 +29,10 @@ public class FornecedorController {
                 fornecedorService.salvarArquivoTemporariamente(arquivo);
         return ResponseEntity.accepted()
                 .body(retornoUsuario);
+    }
+
+    @GetMapping("/")
+    public ResponseEntity<List<FornecedorResponse>> listarTodos() {
+        return ResponseEntity.ok(fornecedorService.listarTodos());
     }
 }

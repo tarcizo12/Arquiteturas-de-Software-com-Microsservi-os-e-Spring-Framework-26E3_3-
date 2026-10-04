@@ -1,6 +1,7 @@
 
 package com.fornecedor.service;
 
+import com.fornecedor.domain.dto.FornecedorResponse;
 import com.fornecedor.domain.entity.FornecedorEntity;
 import com.fornecedor.repository.FornecedorRepository;
 import com.messaging.FornecedorProducer;
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -26,6 +28,20 @@ public class FornecedorService {
     public FornecedorService(FornecedorRepository fornecedorRepository,FornecedorProducer producer) {
         this.repository = fornecedorRepository;
         this.producer = producer;
+    }
+
+    public List<FornecedorResponse> listarTodos() {
+        return repository.findAll()
+                .stream()
+                .map(fornecedor -> new FornecedorResponse(
+                        fornecedor.getId(),
+                        fornecedor.getNome(),
+                        fornecedor.getCnpj(),
+                        fornecedor.getTelefone(),
+                        fornecedor.getEmail(),
+                        fornecedor.getEndereco()
+                ))
+                .toList();
     }
 
     public FornecedorEntity getFornecedorById(Long id) {
