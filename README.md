@@ -1,7 +1,3 @@
-Claro. Reestruturei o README para **responder explicitamente às 6 perguntas da etapa**, além de documentar a funcionalidade real que você implementou: **importação assíncrona de fornecedores via CSV + RabbitMQ + Spring Batch**, incluindo a necessidade de criar a fila.
-
-Também deixei a explicação mais acadêmica e organizada, sem ficar excessivamente extensa.
-
 # Etapa 4 — Comunicação Assíncrona com RabbitMQ e Processamento em Lote
 
 ## 1. Objetivo
