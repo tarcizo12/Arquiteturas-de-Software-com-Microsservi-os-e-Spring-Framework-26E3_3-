@@ -9,7 +9,6 @@ public record MovimentacaoResponse(
     LocalDateTime dataHora,
     String tipo,
     Long idUsuarioResponsavel,
-    String nomeUsuario,
     String observacao,
     List<ItemResponse> itens
 ) {
@@ -18,7 +17,7 @@ public record MovimentacaoResponse(
     public static MovimentacaoResponse from(MovimentacaoEntity e) {
         return new MovimentacaoResponse(
             e.getId(), e.getDataHora(), e.getTipo().name(),
-            e.getIdUsuarioResponsavel(), e.getNomeUsuario(), e.getObservacao(),
+            e.getIdUsuarioResponsavel(), e.getObservacao(),
             e.getItens().stream().map(i -> new ItemResponse(i.getIdProduto(), i.getQuantidade())).toList()
         );
     }

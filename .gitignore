@@ -88,8 +88,6 @@ Thumbs.db
 # Variáveis de ambiente
 # =========================
 .env
-.env.*
-!.env.example
 
 # =========================
 # Configurações locais

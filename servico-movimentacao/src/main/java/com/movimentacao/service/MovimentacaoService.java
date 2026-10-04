@@ -30,7 +30,6 @@ public class MovimentacaoService {
         entity.setDataHora(LocalDateTime.now());
         entity.setTipo(request.tipo());
         entity.setIdUsuarioResponsavel(request.idUsuarioResponsavel());
-        entity.setNomeUsuario(request.nomeUsuario());
         entity.setObservacao(request.observacao());
 
         request.itens().forEach(item ->

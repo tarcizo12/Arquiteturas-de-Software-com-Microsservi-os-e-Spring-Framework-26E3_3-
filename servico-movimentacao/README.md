@@ -1,4 +1,4 @@
-# Serviço de Movimentação — Microsserviço da Etapa 2
+# Serviço de Movimentação
 
 ## Responsabilidade principal
 

@@ -1,0 +1,189 @@
+==========================================================
+ RESUMO DOS BANCOS - 03/10/2026 23:26:07,67
+==========================================================
+
+##########################################################
+ AMBIENTE DEV  -  container estoque-mysql-dev  -  porta 3306
+##########################################################
+
+----------------------------------------------------------
+ BANCO: estoque_principal
+----------------------------------------------------------
+Tabelas encontradas: 4
+
+Tabelas e linhas aproximadas:
++------------+--------------+--------+
+| tabela     | linhas_aprox | engine |
++------------+--------------+--------+
+| categoria  |            0 | InnoDB |
+| fornecedor |            0 | InnoDB |
+| produto    |            0 | InnoDB |
+| usuario    |            0 | InnoDB |
++------------+--------------+--------+
+
+Campos por tabela:
++------------+--------------------+---------------+-------------+-------+--------+----------------+
+| tabela     | campo              | tipo          | aceita_nulo | chave | padrao | extra          |
++------------+--------------------+---------------+-------------+-------+--------+----------------+
+| categoria  | id                 | bigint        | NO          | PRI   | NULL   | auto_increment |
+| categoria  | nome               | varchar(100)  | NO          | UNI   | NULL   |                |
+| categoria  | descricao          | varchar(255)  | YES         |       | NULL   |                |
+| fornecedor | id                 | bigint        | NO          | PRI   | NULL   | auto_increment |
+| fornecedor | nome               | varchar(150)  | NO          |       | NULL   |                |
+| fornecedor | cnpj               | varchar(18)   | NO          | UNI   | NULL   |                |
+| fornecedor | telefone           | varchar(20)   | YES         |       | NULL   |                |
+| fornecedor | email              | varchar(150)  | YES         |       | NULL   |                |
+| fornecedor | endereco           | varchar(255)  | YES         |       | NULL   |                |
+| produto    | id                 | bigint        | NO          | PRI   | NULL   | auto_increment |
+| produto    | tipo_produto       | varchar(20)   | NO          |       | NULL   |                |
+| produto    | nome               | varchar(150)  | NO          |       | NULL   |                |
+| produto    | descricao          | varchar(255)  | YES         |       | NULL   |                |
+| produto    | preco              | decimal(12,2) | NO          |       | NULL   |                |
+| produto    | quantidade_estoque | int           | NO          |       | 0      |                |
+| produto    | categoria_id       | bigint        | NO          | MUL   | NULL   |                |
+| produto    | fornecedor_id      | bigint        | NO          | MUL   | NULL   |                |
+| produto    | data_validade      | date          | YES         |       | NULL   |                |
+| produto    | lote               | varchar(50)   | YES         |       | NULL   |                |
+| produto    | garantia_meses     | int           | YES         |       | NULL   |                |
+| usuario    | id                 | bigint        | NO          | PRI   | NULL   | auto_increment |
+| usuario    | nome               | varchar(150)  | NO          |       | NULL   |                |
+| usuario    | login              | varchar(50)   | NO          | UNI   | NULL   |                |
+| usuario    | senha              | varchar(255)  | NO          |       | NULL   |                |
+| usuario    | perfil             | varchar(30)   | NO          |       | NULL   |                |
++------------+--------------------+---------------+-------------+-------+--------+----------------+
+
+Chaves estrangeiras:
++---------+---------------+------------+-----------+
+| tabela  | campo         | referencia | campo_ref |
++---------+---------------+------------+-----------+
+| produto | categoria_id  | categoria  | id        |
+| produto | fornecedor_id | fornecedor | id        |
++---------+---------------+------------+-----------+
+
+----------------------------------------------------------
+ BANCO: movimentacao_db
+----------------------------------------------------------
+Tabelas encontradas: 2
+
+Tabelas e linhas aproximadas:
++-------------------+--------------+--------+
+| tabela            | linhas_aprox | engine |
++-------------------+--------------+--------+
+| item_movimentacao |            0 | InnoDB |
+| movimentacao      |            0 | InnoDB |
++-------------------+--------------+--------+
+
+Campos por tabela:
++-------------------+-----------------+--------------+-------------+-------+--------+----------------+
+| tabela            | campo           | tipo         | aceita_nulo | chave | padrao | extra          |
++-------------------+-----------------+--------------+-------------+-------+--------+----------------+
+| item_movimentacao | id              | bigint       | NO          | PRI   | NULL   | auto_increment |
+| item_movimentacao | quantidade      | int          | NO          |       | NULL   |                |
+| item_movimentacao | movimentacao_id | bigint       | NO          | MUL   | NULL   |                |
+| item_movimentacao | produto_id      | bigint       | NO          | MUL   | NULL   |                |
+| movimentacao      | id              | bigint       | NO          | PRI   | NULL   | auto_increment |
+| movimentacao      | data_hora       | datetime(6)  | NO          | MUL   | NULL   |                |
+| movimentacao      | tipo            | varchar(10)  | NO          |       | NULL   |                |
+| movimentacao      | observacao      | varchar(255) | YES         |       | NULL   |                |
+| movimentacao      | usuario_id      | bigint       | NO          | MUL   | NULL   |                |
++-------------------+-----------------+--------------+-------------+-------+--------+----------------+
+
+Chaves estrangeiras:
++-------------------+-----------------+--------------+-----------+
+| tabela            | campo           | referencia   | campo_ref |
++-------------------+-----------------+--------------+-----------+
+| item_movimentacao | movimentacao_id | movimentacao | id        |
++-------------------+-----------------+--------------+-----------+
+
+##########################################################
+ AMBIENTE PROD  -  container estoque-mysql-prod  -  porta 3307
+##########################################################
+
+----------------------------------------------------------
+ BANCO: estoque_principal
+----------------------------------------------------------
+Tabelas encontradas: 4
+
+Tabelas e linhas aproximadas:
++------------+--------------+--------+
+| tabela     | linhas_aprox | engine |
++------------+--------------+--------+
+| categoria  |            0 | InnoDB |
+| fornecedor |            0 | InnoDB |
+| produto    |            0 | InnoDB |
+| usuario    |            0 | InnoDB |
++------------+--------------+--------+
+
+Campos por tabela:
++------------+--------------------+---------------+-------------+-------+--------+----------------+
+| tabela     | campo              | tipo          | aceita_nulo | chave | padrao | extra          |
++------------+--------------------+---------------+-------------+-------+--------+----------------+
+| categoria  | id                 | bigint        | NO          | PRI   | NULL   | auto_increment |
+| categoria  | nome               | varchar(100)  | NO          | UNI   | NULL   |                |
+| categoria  | descricao          | varchar(255)  | YES         |       | NULL   |                |
+| fornecedor | id                 | bigint        | NO          | PRI   | NULL   | auto_increment |
+| fornecedor | nome               | varchar(150)  | NO          |       | NULL   |                |
+| fornecedor | cnpj               | varchar(18)   | NO          | UNI   | NULL   |                |
+| fornecedor | telefone           | varchar(20)   | YES         |       | NULL   |                |
+| fornecedor | email              | varchar(150)  | YES         |       | NULL   |                |
+| fornecedor | endereco           | varchar(255)  | YES         |       | NULL   |                |
+| produto    | id                 | bigint        | NO          | PRI   | NULL   | auto_increment |
+| produto    | tipo_produto       | varchar(20)   | NO          |       | NULL   |                |
+| produto    | nome               | varchar(150)  | NO          |       | NULL   |                |
+| produto    | descricao          | varchar(255)  | YES         |       | NULL   |                |
+| produto    | preco              | decimal(12,2) | NO          |       | NULL   |                |
+| produto    | quantidade_estoque | int           | NO          |       | 0      |                |
+| produto    | categoria_id       | bigint        | NO          | MUL   | NULL   |                |
+| produto    | fornecedor_id      | bigint        | NO          | MUL   | NULL   |                |
+| produto    | data_validade      | date          | YES         |       | NULL   |                |
+| produto    | lote               | varchar(50)   | YES         |       | NULL   |                |
+| produto    | garantia_meses     | int           | YES         |       | NULL   |                |
+| usuario    | id                 | bigint        | NO          | PRI   | NULL   | auto_increment |
+| usuario    | nome               | varchar(150)  | NO          |       | NULL   |                |
+| usuario    | login              | varchar(50)   | NO          | UNI   | NULL   |                |
+| usuario    | senha              | varchar(255)  | NO          |       | NULL   |                |
+| usuario    | perfil             | varchar(30)   | NO          |       | NULL   |                |
++------------+--------------------+---------------+-------------+-------+--------+----------------+
+
+Chaves estrangeiras:
++---------+---------------+------------+-----------+
+| tabela  | campo         | referencia | campo_ref |
++---------+---------------+------------+-----------+
+| produto | categoria_id  | categoria  | id        |
+| produto | fornecedor_id | fornecedor | id        |
++---------+---------------+------------+-----------+
+
+----------------------------------------------------------
+ BANCO: movimentacao_db
+----------------------------------------------------------
+Tabelas encontradas: 2
+
+Tabelas e linhas aproximadas:
++-------------------+--------------+--------+
+| tabela            | linhas_aprox | engine |
++-------------------+--------------+--------+
+| item_movimentacao |            0 | InnoDB |
+| movimentacao      |            0 | InnoDB |
++-------------------+--------------+--------+
+
+Campos por tabela:
++-------------------+-----------------+--------------+-------------+-------+--------+----------------+
+| tabela            | campo           | tipo         | aceita_nulo | chave | padrao | extra          |
++-------------------+-----------------+--------------+-------------+-------+--------+----------------+
+| item_movimentacao | id              | bigint       | NO          | PRI   | NULL   | auto_increment |
+| item_movimentacao | quantidade      | int          | NO          |       | NULL   |                |
+| item_movimentacao | movimentacao_id | bigint       | NO          | MUL   | NULL   |                |
+| item_movimentacao | produto_id      | bigint       | NO          | MUL   | NULL   |                |
+| movimentacao      | id              | bigint       | NO          | PRI   | NULL   | auto_increment |
+| movimentacao      | data_hora       | datetime(6)  | NO          | MUL   | NULL   |                |
+| movimentacao      | tipo            | varchar(10)  | NO          |       | NULL   |                |
+| movimentacao      | observacao      | varchar(255) | YES         |       | NULL   |                |
+| movimentacao      | usuario_id      | bigint       | NO          | MUL   | NULL   |                |
++-------------------+-----------------+--------------+-------------+-------+--------+----------------+
+
+Chaves estrangeiras:
++-------------------+-----------------+--------------+-----------+
+| tabela            | campo           | referencia   | campo_ref |
++-------------------+-----------------+--------------+-----------+
+| item_movimentacao | movimentacao_id | movimentacao | id        |
++-------------------+-----------------+--------------+-----------+

@@ -1,6 +1,4 @@
-# Aplicação Principal — Etapa 2
-
-Evolução da aplicação da Etapa 1 do repositório `tarcizo12/Arquiteturas-de-Software-com-Microsservi-os-e-Spring-Framework-26E3_3-`.
+# Aplicação Principal
 
 ## O que foi extraído
 
