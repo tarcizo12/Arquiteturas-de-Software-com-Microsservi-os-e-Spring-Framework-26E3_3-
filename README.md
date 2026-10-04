@@ -1,204 +1,385 @@
-## Reflexão Arquitetural – Etapa 3
+# Etapa 4 — Comunicação Assíncrona com RabbitMQ
 
-### 1. Quais configurações da aplicação podem variar entre ambientes?
+## 1. Objetivo
 
-As configurações que podem variar entre os ambientes de desenvolvimento e produção são principalmente a porta da aplicação, a URL de conexão com o banco de dados, o usuário e a senha do banco, além de algumas configurações relacionadas à execução da aplicação, como o comportamento do Hibernate e a exibição dos comandos SQL.
+Nesta etapa foi implementada uma funcionalidade de **comunicação assíncrona** entre os componentes da aplicação utilizando **RabbitMQ** como message broker.
 
-Também podem variar as configurações relacionadas à comunicação entre os serviços, como as URLs utilizadas para acessar outros serviços da aplicação.
+O objetivo é permitir que uma solicitação de processamento seja enviada para uma fila, sem que o componente responsável pelo envio precise aguardar o processamento da mensagem para continuar sua execução.
 
-### 2. Quais dessas configurações foram externalizadas?
+A implementação utiliza o padrão **Producer/Consumer**, onde:
 
-As configurações relacionadas ao ambiente foram externalizadas utilizando arquivos de configuração específicos para cada profile, como `application-dev.properties` e `application-prod.properties`.
-
-Além disso, foram utilizadas variáveis de ambiente para configurações como:
-
-- `SERVER_PORT`
-- `DB_URL`
-- `DB_USERNAME`
-- `DB_PASSWORD`
-- `JPA_DDL_AUTO`
-- `JPA_SHOW_SQL`
-
-Dessa forma, informações específicas do ambiente, principalmente as credenciais do banco de dados, não precisam ficar diretamente inseridas no código Java.
-
-### 3. Por que um serviço não deve acessar diretamente o banco de outro serviço?
-
-Cada serviço deve ser responsável pelos seus próprios dados e pelas regras relacionadas a esses dados. Permitir que um serviço acesse diretamente as tabelas de outro cria um forte acoplamento entre as aplicações.
-
-Neste projeto, a comunicação entre responsabilidades separadas deve ocorrer através das interfaces disponibilizadas pelos próprios serviços, como APIs HTTP. Dessa forma, cada serviço pode alterar sua estrutura interna ou seu banco de dados sem obrigatoriamente quebrar os demais serviços.
-
-Essa separação também facilita a evolução, manutenção, escalabilidade e implantação independente das aplicações.
-
-### 4. Qual problema o Docker resolve no projeto?
-
-O Docker permite empacotar a aplicação juntamente com o ambiente necessário para sua execução, tornando o comportamento da aplicação mais previsível e reproduzível em diferentes ambientes.
-
-Com a utilização de containers, a aplicação não depende diretamente da configuração específica da máquina do desenvolvedor. Dessa forma, diferenças relacionadas a sistema operacional, instalação de dependências, versões de ferramentas e configuração do ambiente são reduzidas.
-
-No projeto, o Docker também permite executar as aplicações e os bancos de dados de forma isolada e padronizada.
-
-### 5. Qual é a função do Docker Compose?
-
-O Docker Compose permite definir e executar os principais componentes do projeto de forma integrada.
-
-Por meio do arquivo `docker-compose.yml`, é possível configurar os principais componentes da solução, como os bancos de dados e, quando aplicável, as aplicações e o Config Server, especificando suas respectivas configurações, redes, portas, volumes e dependências.
-
-Assim, os componentes podem ser iniciados de maneira padronizada através de um único comando, facilitando a execução e os testes da solução completa.
-
-Além disso, os containers podem se comunicar através da rede criada pelo Docker Compose utilizando os nomes dos serviços, evitando a utilização de `localhost` para a comunicação entre containers.
-
-### 6. Qual problema uma configuração centralizada procura resolver?
-
-A configuração centralizada procura evitar que cada aplicação distribuída mantenha suas configurações espalhadas e duplicadas em diferentes projetos.
-
-Com a utilização do Spring Cloud Config Server, configurações compartilhadas ou específicas dos ambientes podem ser disponibilizadas de forma centralizada para as aplicações.
-
-Isso facilita a manutenção e a alteração das configurações, pois uma mudança pode ser realizada no local responsável pelo gerenciamento das configurações sem a necessidade de modificar o código-fonte das aplicações.
-
-Dessa forma, a configuração fica separada da lógica de negócio, contribuindo para uma arquitetura mais flexível e adequada à execução em diferentes ambientes.
+* O **Producer** publica uma mensagem no RabbitMQ.
+* O **RabbitMQ** recebe e mantém a mensagem na fila.
+* O **Consumer** fica aguardando novas mensagens.
+* O **Consumer** recebe e processa a mensagem de forma independente.
 
 ---
 
-## 7. Execução com Docker Compose
+# 2. Arquitetura da comunicação
 
-O projeto possui um arquivo `docker-compose.yml` responsável pela definição e execução dos containers utilizados pela solução.
-
-Antes de executar o Compose, é necessário garantir que o **Docker Desktop** esteja instalado e em execução.
-
-Na raiz do projeto, onde está localizado o arquivo `docker-compose.yml`, execute:
-
-```bash
-docker compose up -d
-````
-
-O parâmetro `-d` faz com que os containers sejam executados em segundo plano, permitindo continuar utilizando o terminal.
-
-Para verificar os containers em execução, utilize:
-
-```bash
-docker compose ps
-```
-
-Para acompanhar os logs dos serviços:
-
-```bash
-docker compose logs -f
-```
-
-Para parar os containers sem remover os dados persistidos:
-
-```bash
-docker compose stop
-```
-
-Para iniciar novamente os containers que foram parados:
-
-```bash
-docker compose start
-```
-
-Caso seja necessário parar e remover os containers criados pelo Compose:
-
-```bash
-docker compose down
-```
-
-Os volumes não são removidos pelo comando `docker compose down` quando utilizados separadamente, permitindo preservar os dados dos bancos.
-
-Para remover também os volumes e recriar o ambiente de banco do zero, pode ser utilizado o script `resetar-banco.bat`, descrito abaixo.
-
-### Execução simplificada
-
-O fluxo básico utilizando Docker Compose é:
+A comunicação implementada segue o seguinte fluxo:
 
 ```text
-                 docker compose up -d
-                         |
-                         v
-              +----------------------+
-              | Containers iniciados |
-              +----------+-----------+
-                         |
-                         v
-              Bancos disponíveis
-                         |
-                         v
-              Aplicações executadas
-                         |
-                         v
-                    Testes
+┌──────────────────────┐
+│   Aplicação Principal│
+│                      │
+│     Fornecedor       │
+└──────────┬───────────┘
+           │
+           │ envia mensagem
+           ▼
+┌──────────────────────┐
+│  FornecedorProducer  │
+│                      │
+│    RabbitTemplate     │
+└──────────┬───────────┘
+           │
+           │ mensagem
+           ▼
+┌────────────────────────────────┐
+│           RabbitMQ             │
+│                                │
+│  Fila: solicitar.processamento │
+└──────────┬─────────────────────┘
+           │
+           │ entrega mensagem
+           ▼
+┌──────────────────────┐
+│  FornecedorConsumer  │
+│                      │
+│ @RabbitListener      │
+└──────────┬───────────┘
+           │
+           ▼
+      Processamento
 ```
 
-Dessa forma, o Docker Compose centraliza a configuração da infraestrutura necessária para execução do projeto e permite reproduzir o ambiente de maneira padronizada.
+A principal característica dessa arquitetura é o **desacoplamento** entre quem produz a mensagem e quem realiza o processamento.
+
+O Producer não precisa conhecer a implementação interna do Consumer. Ele apenas publica a mensagem na fila definida.
 
 ---
 
-## 8. Scripts de gerenciamento (.bat)
+# 3. RabbitMQ
 
-Além dos comandos do Docker Compose, o projeto possui arquivos `.bat` para facilitar a execução das tarefas mais utilizadas durante o desenvolvimento no Windows.
+O RabbitMQ foi utilizado como **message broker** da aplicação.
 
-Os scripts podem ser executados diretamente com **duplo clique** ou pelo terminal, desde que o Docker Desktop esteja em execução.
+Sua responsabilidade é receber, armazenar e encaminhar as mensagens publicadas pelos Producers para os Consumers interessados.
 
-### `subir-banco.bat`
-
-O arquivo `subir-banco.bat` automatiza a inicialização dos bancos de dados do projeto.
-
-Ele executa os comandos necessários para:
-
-* iniciar os containers MySQL;
-* aguardar os bancos ficarem disponíveis;
-* executar os scripts SQL de inicialização;
-* preparar os bancos para utilização pelas aplicações.
-
-Assim, em vez de executar manualmente vários comandos do Docker Compose e do MySQL, basta executar:
+Neste projeto foi criada a fila:
 
 ```text
-subir-banco.bat
+solicitar.processamento
 ```
 
-### `resumo-bancos.bat`
+Essa fila representa o canal utilizado para as solicitações de processamento assíncrono.
 
-O arquivo `resumo-bancos.bat` foi criado para facilitar a consulta da estrutura dos bancos.
-
-Ele permite verificar informações como:
-
-* bancos existentes;
-* tabelas;
-* campos;
-* tipos de dados;
-* chaves estrangeiras;
-* quantidade aproximada de registros.
-
-Pode ser utilizado para verificar rapidamente se a estrutura dos bancos está de acordo com o esperado.
-
-Para executar:
+A comunicação com o RabbitMQ utiliza:
 
 ```text
-resumo-bancos.bat
+Host: localhost
+Porta AMQP: 5672
+Porta Management: 15672
+Usuário: admin
+Senha: admin
 ```
 
-### `resetar-banco.bat`
-
-O arquivo `resetar-banco.bat` automatiza a limpeza completa do ambiente de banco utilizado nos testes.
-
-Ele remove os containers, volumes e imagens relacionados ao ambiente configurado no Docker Compose.
-
-Como os volumes são removidos, os dados armazenados nos bancos também são apagados.
-
-Após a execução do reset, o ambiente pode ser criado novamente utilizando:
+O painel administrativo pode ser acessado através de:
 
 ```text
-subir-banco.bat
+http://localhost:15672
 ```
 
-Esse processo permite retornar os bancos para um estado inicial e repetir os testes desde o começo.
+---
 
-### Resumo dos scripts
+# 4. Fila solicitar.processamento
 
-| Arquivo             | Finalidade                                                          |
-| ------------------- | ------------------------------------------------------------------- |
-| `subir-banco.bat`   | Inicia e prepara os bancos de dados                                 |
-| `resumo-bancos.bat` | Consulta e apresenta a estrutura dos bancos                         |
-| `resetar-banco.bat` | Remove o ambiente de banco e seus dados para uma nova inicialização |
+A fila utilizada pela funcionalidade é:
 
-Os arquivos `.bat` funcionam como uma camada de automação sobre os comandos do Docker Compose, tornando o projeto mais simples de executar e administrar no ambiente Windows.
+```text
+solicitar.processamento
+```
+
+A fila deve existir no RabbitMQ para que o Producer possa publicar as mensagens e o Consumer possa recebê-las.
+
+Durante a configuração atual do ambiente, a fila é criada no RabbitMQ antes da execução da funcionalidade.
+
+A aplicação utiliza a referência da fila através do arquivo `application.properties`:
+
+```properties
+rabbitmq.queue.solicitar-processamento=solicitar.processamento
+```
+
+Dessa forma, o nome da fila não fica diretamente espalhado pelo código da aplicação.
+
+---
+
+# 5. Producer
+
+O Producer é responsável por publicar as mensagens no RabbitMQ.
+
+Foi criada a classe:
+
+```text
+com.messaging.FornecedorProducer
+```
+
+A comunicação com o RabbitMQ é realizada utilizando o `RabbitTemplate`, disponibilizado pelo Spring AMQP.
+
+O Producer recebe uma `String` e publica seu conteúdo na fila:
+
+```text
+solicitar.processamento
+```
+
+O fluxo é:
+
+```text
+FornecedorProducer
+       │
+       ▼
+RabbitTemplate
+       │
+       ▼
+RabbitMQ
+       │
+       ▼
+solicitar.processamento
+```
+
+O Producer não precisa aguardar o Consumer concluir o processamento da mensagem.
+
+Essa característica permite que a aplicação continue sua execução mesmo que o processamento posterior seja realizado em outro momento.
+
+---
+
+# 6. Consumer
+
+O Consumer é responsável por receber as mensagens disponibilizadas na fila.
+
+Foi criada a classe:
+
+```text
+com.messaging.FornecedorConsumer
+```
+
+O recebimento da mensagem é realizado através da anotação:
+
+```java
+@RabbitListener
+```
+
+A configuração utiliza a mesma referência definida no `application.properties`:
+
+```properties
+rabbitmq.queue.solicitar-processamento=solicitar.processamento
+```
+
+Quando uma mensagem é publicada na fila, o Consumer recebe automaticamente o conteúdo.
+
+O fluxo é:
+
+```text
+RabbitMQ
+    │
+    ▼
+solicitar.processamento
+    │
+    ▼
+FornecedorConsumer
+    │
+    ▼
+Processamento da mensagem
+```
+
+---
+
+# 7. Funcionamento assíncrono
+
+A principal característica implementada nesta etapa é a **execução assíncrona**.
+
+Em uma comunicação síncrona, o componente que realiza uma solicitação normalmente precisa aguardar uma resposta para continuar o fluxo.
+
+Na abordagem implementada, o Producer apenas publica a mensagem:
+
+```text
+Producer
+   │
+   │ publica
+   ▼
+RabbitMQ
+```
+
+O processamento posterior fica sob responsabilidade do Consumer:
+
+```text
+RabbitMQ
+   │
+   │ entrega posteriormente
+   ▼
+Consumer
+```
+
+Isso permite que os dois componentes tenham menor acoplamento temporal.
+
+O Producer não precisa esperar que o Consumer finalize seu processamento.
+
+---
+
+# 8. Configuração do RabbitMQ
+
+O RabbitMQ foi adicionado ao ambiente através de um container Docker.
+
+A imagem utilizada é:
+
+```text
+rabbitmq:3.13-management
+```
+
+O plugin de gerenciamento permite acompanhar as filas e mensagens através do navegador.
+
+As portas utilizadas são:
+
+```text
+5672  → comunicação da aplicação com o RabbitMQ
+15672 → painel administrativo
+```
+
+O container utiliza:
+
+```text
+Usuário: admin
+Senha: admin
+```
+
+---
+
+# 9. Configuração no Docker Compose
+
+O RabbitMQ também faz parte da infraestrutura definida no `docker-compose.yml`.
+
+Exemplo:
+
+```yaml
+rabbitmq:
+  build: ./rabbitmq
+  container_name: estoque-rabbitmq
+  restart: unless-stopped
+  environment:
+    RABBITMQ_DEFAULT_USER: admin
+    RABBITMQ_DEFAULT_PASS: admin
+  ports:
+    - "5672:5672"
+    - "15672:15672"
+  healthcheck:
+    test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+    interval: 5s
+    timeout: 5s
+    retries: 20
+    start_period: 10s
+```
+
+A aplicação principal depende do RabbitMQ estar disponível antes de iniciar sua comunicação com o broker.
+
+---
+
+# 10. Configuração da aplicação
+
+As configurações necessárias para conexão com o RabbitMQ são mantidas no `application.properties`:
+
+```properties
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=admin
+spring.rabbitmq.password=admin
+
+rabbitmq.queue.solicitar-processamento=solicitar.processamento
+```
+
+A propriedade:
+
+```properties
+rabbitmq.queue.solicitar-processamento
+```
+
+centraliza o nome da fila utilizada pelo Producer e pelo Consumer.
+
+---
+
+# 11. Teste da funcionalidade
+
+Com o RabbitMQ em execução, é possível acessar o painel administrativo:
+
+```text
+http://localhost:15672
+```
+
+Após o login, a fila deve estar disponível em:
+
+```text
+Queues and Streams
+```
+
+com o nome:
+
+```text
+solicitar.processamento
+```
+
+Uma mensagem pode ser publicada através do Producer.
+
+Por exemplo:
+
+```text
+teste de processamento
+```
+
+O RabbitMQ recebe a mensagem e a disponibiliza na fila.
+
+O Consumer, por sua vez, recebe a mensagem através do `@RabbitListener`.
+
+O resultado esperado é:
+
+```text
+Mensagem recebida: teste de processamento
+```
+
+---
+
+# 12. Benefícios da solução
+
+A utilização do RabbitMQ nesta etapa proporciona:
+
+* Comunicação assíncrona entre componentes.
+* Desacoplamento entre Producer e Consumer.
+* Processamento independente das mensagens.
+* Possibilidade de o Consumer processar as mensagens posteriormente.
+* Redução da dependência temporal entre os componentes.
+* Possibilidade de adicionar novos Consumers futuramente.
+* Gerenciamento das mensagens através do RabbitMQ.
+* Monitoramento das filas através do painel administrativo.
+
+---
+
+# 13. Resultado da Etapa 4
+
+Ao final desta etapa, foi implementado um fluxo completo de comunicação assíncrona:
+
+```text
+┌──────────────┐
+│   Producer   │
+└──────┬───────┘
+       │
+       │ String
+       ▼
+┌───────────────────────┐
+│       RabbitMQ        │
+│                       │
+│ solicitar.processamento│
+└──────────┬────────────┘
+           │
+           │ String
+           ▼
+┌──────────────┐
+│   Consumer   │
+└──────────────┘

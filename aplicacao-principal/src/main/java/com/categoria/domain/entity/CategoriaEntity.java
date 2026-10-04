@@ -1,12 +1,7 @@
 package com.categoria.domain.entity;
 
-import com.produto.domain.entity.ProdutoEntity;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "categoria")
@@ -23,10 +18,6 @@ public class CategoriaEntity {
     @Column(name = "descricao", length = 255)
     private String descricao;
 
-    @OneToMany(mappedBy = "categoria")
-    @EqualsAndHashCode.Exclude
-    private List<ProdutoEntity> produtos = new ArrayList<>();
-
     public CategoriaEntity() {}
 
     public CategoriaEntity(String nome, String descricao) {
@@ -41,37 +32,5 @@ public class CategoriaEntity {
                 "  nome='" + nome + "'\n" +
                 "  descricao='" + descricao + "'\n" +
                 '}';
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public List<ProdutoEntity> getProdutos() {
-        return produtos;
-    }
-
-    public void setProdutos(List<ProdutoEntity> produtos) {
-        this.produtos = produtos;
     }
 }

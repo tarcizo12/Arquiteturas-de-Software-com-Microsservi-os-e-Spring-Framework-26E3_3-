@@ -1,0 +1,503 @@
+nome,cnpj,telefone,email,endereco
+Distribuidora de Alimentos Boa Vista LTDA,47.231.895/4821-03,(11) 98765-4321,contato@distribuidoraboa.com.br,Avenida São João, 452 - Centro, São Paulo - SP
+Atacadista de Bebidas Central ME,12.567.891/0001-45,(21) 3456-7890,vendas@atacadistacentr.com.br,Rua das Palmeiras, 1230 - Jardim América, Rio de Janeiro - RJ
+Hortifruti do Norte EIRELI,89.654.321/0001-78,(31) 99876-5432,comercial@hortifrutidonor.com.br,Travessa Tiradentes, 87 - Vila Nova, Belo Horizonte - MG
+Panificadora Aliança LTDA,03.147.258/0001-99,(41) 3232-1010,pedidos@panificadoraalianca.com.br,Alameda dos Ipês, 2100 - Batel, Curitiba - PR
+Frios e Laticínios Santa Rita ME,55.444.333/0001-22,(51) 99988-7766,atendimento@friosedelaticinios.com.br,Rodovia Brasil, 45 - Industrial, Porto Alegre - RS
+Comércio de Alimentos Aurora S/A,18.222.777/0001-11,(61) 3344-5566,comercial@comercioaurora.com.br,Estrada das Acácias, 780, Galpão A - Taguatinga, Brasília - DF
+Mercearia do Sul MEI,66.111.222/0001-33,(48) 98877-6655,contato@merceariadosul.com.br,Rua Rio Branco, 321 - Centro, Florianópolis - SC
+Doces e Balas Estrela LTDA,29.888.444/0001-55,(85) 3232-8899,vendas@docesestrela.com.br,Avenida Beira Rio, 1450 - Aldeota, Fortaleza - CE
+Limpeza e Higiene Prime ME,74.555.999/0001-77,(62) 99654-3210,atendimento@limpezaprime.com.br,Rua das Flores, 890 - Setor Bueno, Goiânia - GO
+Congelados Express EIRELI,81.333.666/0001-88,(71) 3011-2233,pedidos@congeladosexpress.com.br,Avenida Amazonas, 234 - Comércio, Salvador - BA
+Cerealista Nacional LTDA,36.999.111/0001-44,(81) 99887-1122,contato@cerealistanacional.com.br,Rua da Aurora, 560 - Boa Vista, Recife - PE
+Empório Real ME,53.222.888/0001-66,(92) 3654-7788,vendas@emporioreal.com.br,Avenida Eduardo Ribeiro, 1230 - Centro, Manaus - AM
+Casa de Carnes Três Irmãos LTDA,91.444.555/0001-99,(27) 99765-4433,comercial@carnestresirm.com.br,Rua Jerônimo Monteiro, 445 - Centro, Vitória - ES
+Laticínios Bom Preço ME,15.666.777/0001-01,(19) 3232-4455,pedidos@laticiniosbompreco.com.br,Avenida Andrade Neves, 780 - Botafogo, Campinas - SP
+Indústria e Comércio Vitória S/A,42.111.333/0001-12,(84) 99876-5544,contato@industriavitoria.com.br,Rua Mossoró, 234 - Tirol, Natal - RN
+Logística e Distribuição Master LTDA,68.888.222/0001-23,(91) 3241-5566,atendimento@logisticamaster.com.br,Travessa Quintino Bocaiúva, 156 - Nazaré, Belém - PA
+Armazém Popular MEI,24.333.999/0001-34,(67) 99654-1122,vendas@armazempopular.com.br,Rua 14 de Julho, 678 - Centro, Campo Grande - MS
+Distribuidora de Bebidas Sol Nascente EIRELI,77.555.111/0001-45,(65) 3232-7788,contato@bebidassolnascente.com.br,Avenida Getúlio Vargas, 1200 - Popular, Cuiabá - MT
+Comércio de Alimentos São José LTDA,33.222.666/0001-56,(98) 99887-3344,comercial@alimentossaojose.com.br,Rua Grande, 45 - Centro, São Luís - MA
+Atacadista de Alimentos Novo Milênio ME,88.999.444/0001-67,(86) 3232-9911,pedidos@novomilenio.com.br,Avenida Frei Serafim, 890 - Centro, Teresina - PI
+Distribuidora de Bebidas do Sul LTDA,51.147.258/0001-78,(48) 99876-1122,vendas@bebidasdosul.com.br,Rua Felipe Schmidt, 234 - Centro, Joinville - SC
+Comércio de Alimentos Progresso ME,19.369.258/0001-89,(11) 4002-8922,contato@alimentosprogresso.com.br,Avenida Paulista, 1578, Sala 2 - Bela Vista, São Paulo - SP
+Hortifruti Bom Preço EIRELI,62.258.147/0001-90,(21) 2532-4455,comercial@hortifrutibom.com.br,Rua Voluntários da Pátria, 445 - Botafogo, Rio de Janeiro - RJ
+Panificadora Estrela MEI,84.369.147/0001-01,(31) 99887-6677,pedidos@panificadoraestrela.com.br,Rua da Bahia, 1200 - Lourdes, Belo Horizonte - MG
+Frios e Laticínios Aurora LTDA,28.147.369/0001-12,(41) 3352-7788,atendimento@friosaurora.com.br,Rua XV de Novembro, 890 - Centro, Curitiba - PR
+Cerealista Aliança ME,73.951.482/0001-23,(51) 99876-8899,vendas@cerealistaalianca.com.br,Avenida Ipiranga, 6680 - Jardim Botânico, Porto Alegre - RS
+Empório Premium S/A,46.258.369/0001-34,(61) 3443-5566,contato@emporiopremium.com.br,SCS Quadra 2, Bloco C, Loja 5 - Asa Sul, Brasília - DF
+Doces e Balas Real LTDA,11.852.963/0001-45,(48) 3232-1144,comercial@docesreal.com.br,Rua Bocaiúva, 1780 - Centro, Florianópolis - SC
+Limpeza e Higiene Express ME,95.741.852/0001-56,(85) 99876-2233,pedidos@limpezaexpress.com.br,Avenida Dom Luís, 500 - Meireles, Fortaleza - CE
+Congelados Central EIRELI,37.159.482/0001-67,(62) 3251-4455,atendimento@congeladoscentral.com.br,Avenida Anhanguera, 3400 - Setor Central, Goiânia - GO
+Casa de Carnes Boa Vista LTDA,63.852.741/0001-78,(71) 99876-3344,vendas@carnesboavista.com.br,Avenida Sete de Setembro, 1200 - Vitória, Salvador - BA
+Mercearia do Norte MEI,22.951.753/0001-89,(81) 3232-5566,contato@merceariadonorte.com.br,Rua do Bom Jesus, 234 - Recife Antigo, Recife - PE
+Distribuidora de Alimentos Nacional ME,49.357.159/0001-90,(92) 99876-4455,comercial@distribuidoranacional.com.br,Avenida Djalma Batista, 1500 - Chapada, Manaus - AM
+Atacadista de Bebidas Vitória LTDA,81.258.963/0001-01,(27) 3232-7788,pedidos@atacadistavitoria.com.br,Avenida Jerônimo Monteiro, 890 - Centro, Vitória - ES
+Hortifruti Popular EIRELI,17.852.963/0001-12,(19) 99876-5566,atendimento@hortifrutipopular.com.br,Avenida Norte-Sul, 1200 - Centro, Campinas - SP
+Frios e Laticínios Central ME,55.741.852/0001-23,(84) 3232-9900,vendas@frioscentral.com.br,Avenida Bernardo Vieira, 780 - Tirol, Natal - RN
+Cerealista São José LTDA,38.159.753/0001-34,(91) 99876-6677,contato@cerealistasaojose.com.br,Travessa Padre Eutíquio, 890 - Batista Campos, Belém - PA
+Empório do Sul MEI,72.963.852/0001-45,(67) 3232-1122,comercial@emporiodosul.com.br,Avenida Afonso Pena, 2340 - Centro, Campo Grande - MS
+Doces e Balas Express S/A,26.852.147/0001-56,(65) 99876-7788,pedidos@docesexpress.com.br,Avenida Historiador Rubens de Mendonça, 1200 - Bosque, Cuiabá - MT
+Limpeza e Higiene Bom Preço ME,44.951.753/0001-67,(98) 3232-3344,atendimento@limpezabompreco.com.br,Avenida Colares Moreira, 45 - Renascença, São Luís - MA
+Congelados Premium LTDA,89.357.159/0001-78,(86) 99876-8899,vendas@congeladospremium.com.br,Avenida Marechal Castelo Branco, 890 - Cabral, Teresina - PI
+Casa de Carnes Progresso EIRELI,31.258.741/0001-89,(48) 3232-5566,contato@carnesprogresso.com.br,Rua das Palmeiras, 456 - Centro, Joinville - SC
+Distribuidora de Bebidas Aliança ME,58.852.963/0001-90,(11) 99876-9900,comercial@bebidasalianca.com.br,Avenida Brigadeiro Faria Lima, 3400, Loja 5 - Itaim Bibi, São Paulo - SP
+Mercearia Estrela MEI,13.741.852/0001-01,(21) 3232-7788,pedidos@merceariaestrela.com.br,Rua Copacabana, 234 - Copacabana, Rio de Janeiro - RJ
+Panificadora Aurora LTDA,79.159.753/0001-12,(31) 99876-1122,atendimento@panificadoraaurora.com.br,Avenida Afonso Pena, 1900 - Centro, Belo Horizonte - MG
+Cerealista União S/A,27.963.852/0001-23,(41) 3232-9900,vendas@cerealistauniao.com.br,Rua Marechal Deodoro, 780 - Centro, Curitiba - PR
+Empório Master ME,64.852.147/0001-34,(51) 99876-2233,contato@emporiomaster.com.br,Avenida Assis Brasil, 3400 - Sarandi, Porto Alegre - RS
+Frios e Laticínios Real EIRELI,41.951.753/0001-45,(61) 3232-1122,comercial@friosreal.com.br,CLS 304, Bloco A, Loja 2 - Asa Sul, Brasília - DF
+Doces e Balas Central MEI,86.357.159/0001-56,(48) 99876-3344,pedidos@docescentral.com.br,Rua Conselheiro Mafra, 890 - Centro, Florianópolis - SC
+Atacadista de Alimentos Boa Vista LTDA,32.258.741/0001-67,(85) 3232-3344,atendimento@atacadistaboavista.com.br,Avenida Washington Soares, 1400 - Edson Queiroz, Fortaleza - CE
+Hortifruti do Sul ME,57.852.963/0001-78,(62) 99876-4455,vendas@hortifrutidosul.com.br,Rua 9, 1200 - Setor Oeste, Goiânia - GO
+Limpeza e Higiene Vitória EIRELI,14.741.852/0001-89,(71) 3232-5566,contato@limpezavitoria.com.br,Avenida Oceânica, 890 - Barra, Salvador - BA
+Congelados Nacional MEI,78.159.753/0001-90,(81) 99876-5566,comercial@congeladosnacional.com.br,Avenida Boa Viagem, 1200 - Boa Viagem, Recife - PE
+Casa de Carnes do Norte LTDA,25.963.852/0001-01,(92) 3232-7788,pedidos@carnesdonorte.com.br,Avenida Constantino Nery, 890 - São Geraldo, Manaus - AM
+Distribuidora de Alimentos Sol Nascente S/A,61.852.147/0001-12,(27) 99876-6677,atendimento@distribuidorasol.com.br,Avenida Nossa Senhora da Penha, 1200 - Praia do Canto, Vitória - ES
+Mercearia Bom Preço ME,43.951.753/0001-23,(19) 3232-9900,vendas@merceariabompreco.com.br,Rua Barão de Jaguara, 890 - Centro, Campinas - SP
+Panificadora São José EIRELI,87.357.159/0001-34,(84) 99876-7788,contato@panificadorasaojose.com.br,Avenida Prudente de Morais, 1200 - Petrópolis, Natal - RN
+Frios e Laticínios Premium MEI,34.258.741/0001-45,(91) 3232-1122,comercial@friosepremium.com.br,Avenida Almirante Barroso, 890 - Marco, Belém - PA
+Cerealista Vitória LTDA,56.852.963/0001-56,(67) 99876-8899,pedidos@cerealistavitoria.com.br,Rua Dom Aquino, 1200 - Centro, Campo Grande - MS
+Empório Aliança ME,12.741.852/0001-67,(65) 3232-3344,atendimento@emporioalianca.com.br,Avenida Isaac Póvoas, 890 - Centro, Cuiabá - MT
+Doces e Balas Boa Vista EIRELI,75.159.753/0001-78,(98) 99876-9900,vendas@docesboavista.com.br,Avenida dos Holandeses, 1200 - Calhau, São Luís - MA
+Limpeza e Higiene Nacional S/A,23.963.852/0001-89,(86) 3232-5566,contato@limpezanacional.com.br,Avenida Dom Severino, 890 - Fátima, Teresina - PI
+Congelados do Sul MEI,67.852.147/0001-90,(48) 99876-1122,comercial@congeladosdosul.com.br,Rua Blumenau, 1200 - Centro, Joinville - SC
+Distribuidora de Bebidas Progresso LTDA,45.951.753/0001-01,(11) 3232-7788,pedidos@bebidasprogresso.com.br,Avenida Rebouças, 3400 - Pinheiros, São Paulo - SP
+Atacadista de Alimentos Estrela ME,82.357.159/0001-12,(21) 99876-2233,atendimento@atacadistaestrela.com.br,Rua Barata Ribeiro, 890 - Copacabana, Rio de Janeiro - RJ
+Hortifruti Real EIRELI,36.258.741/0001-23,(31) 3232-9900,vendas@hortifrutireal.com.br,Avenida do Contorno, 1200 - Savassi, Belo Horizonte - MG
+Casa de Carnes Central MEI,54.852.963/0001-34,(41) 99876-3344,contato@carnescentral.com.br,Avenida Sete de Setembro, 890 - Centro, Curitiba - PR
+Panificadora Bom Preço LTDA,18.741.852/0001-45,(51) 3232-1122,comercial@panificadorabom.com.br,Avenida Protásio Alves, 3400 - Petrópolis, Porto Alegre - RS
+Frios e Laticínios Express S/A,71.159.753/0001-56,(61) 99876-4455,pedidos@friosepress.com.br,SQS 302, Bloco B, Loja 3 - Asa Sul, Brasília - DF
+Mercearia Aliança ME,29.963.852/0001-67,(48) 3232-3344,atendimento@merceariaalianca.com.br,Avenida Beira Mar Norte, 890 - Centro, Florianópolis - SC
+Cerealista do Norte EIRELI,65.852.147/0001-78,(85) 99876-5566,vendas@cerealistadonorte.com.br,Avenida Bezerra de Menezes, 1200 - São Gerardo, Fortaleza - CE
+Empório Central MEI,42.951.753/0001-89,(62) 3232-7788,contato@emporiocentral.com.br,Avenida T-63, 890 - Setor Bueno, Goiânia - GO
+Doces e Balas do Sul LTDA,85.357.159/0001-90,(71) 99876-6677,comercial@docesdosul.com.br,Avenida Tancredo Neves, 1200 - Caminho das Árvores, Salvador - BA
+Limpeza e Higiene Boa Vista ME,37.258.741/0001-01,(81) 3232-9900,pedidos@limpezaboavista.com.br,Rua da Concórdia, 890 - São José, Recife - PE
+Congelados Aliança EIRELI,53.852.963/0001-12,(92) 99876-7788,atendimento@congeladosalianca.com.br,Avenida Torquato Tapajós, 1200 - Flores, Manaus - AM
+Distribuidora de Alimentos Premium S/A,16.741.852/0001-23,(27) 3232-1122,vendas@distribuidorapremium.com.br,Rua Sete de Setembro, 890 - Centro, Vitória - ES
+Atacadista de Bebidas Nacional MEI,73.159.753/0001-34,(19) 99876-8899,contato@atacadistanacional.com.br,Avenida John Boyd Dunlop, 1200 - Jardim Ipaussurama, Campinas - SP
+Hortifruti Vitória LTDA,28.963.852/0001-45,(84) 3232-3344,comercial@hortifrutivitoria.com.br,Avenida Salgado Filho, 890 - Tirol, Natal - RN
+Panificadora Progresso ME,64.852.147/0001-56,(91) 99876-9900,pedidos@panificadoraprogresso.com.br,Travessa Vileta, 1200 - Pedreira, Belém - PA
+Frios e Laticínios do Sul EIRELI,47.951.753/0001-67,(67) 3232-5566,atendimento@friosdosul.com.br,Rua Marechal Rondon, 890 - Centro, Campo Grande - MS
+Casa de Carnes Estrela MEI,83.357.159/0001-78,(65) 99876-1122,vendas@carnesestrela.com.br,Avenida do CPA, 1200 - Araés, Cuiabá - MT
+Cerealista Aurora S/A,35.258.741/0001-89,(98) 3232-7788,contato@cerealistaaurora.com.br,Avenida dos Africanos, 890 - São Francisco, São Luís - MA
+Empório Nacional ME,52.852.963/0001-90,(86) 99876-2233,comercial@emporionacional.com.br,Avenida Nossa Senhora de Fátima, 1200 - Fátima, Teresina - PI
+Doces e Balas Progresso LTDA,17.741.852/0001-01,(48) 3232-9900,pedidos@docesprogresso.com.br,Rua XV de Novembro, 890 - Centro, Joinville - SC
+Limpeza e Higiene Central EIRELI,76.159.753/0001-12,(11) 99876-3344,atendimento@limpezacentral.com.br,Avenida Santo Amaro, 3400 - Vila Olímpia, São Paulo - SP
+Congelados Real MEI,31.963.852/0001-23,(21) 3232-1122,vendas@congeladosreal.com.br,Avenida Nossa Senhora de Copacabana, 890 - Copacabana, Rio de Janeiro - RJ
+Distribuidora de Bebidas Express LTDA,63.852.147/0001-34,(31) 99876-4455,contato@bebidasexpress.com.br,Rua Sapucaí, 1200 - Floresta, Belo Horizonte - MG
+Atacadista de Alimentos Bom Preço ME,48.951.753/0001-45,(41) 3232-5566,comercial@atacadistabom.com.br,Avenida República Argentina, 890 - Água Verde, Curitiba - PR
+Hortifruti Central EIRELI,84.357.159/0001-56,(51) 99876-6677,pedidos@hortifruticentral.com.br,Avenida Bento Gonçalves, 3400 - Partenon, Porto Alegre - RS
+Panificadora Nacional S/A,26.258.741/0001-67,(61) 3232-7788,atendimento@panificadoranacional.com.br,CLN 202, Bloco A, Loja 1 - Asa Norte, Brasília - DF
+Frios e Laticínios Aliança MEI,59.852.963/0001-78,(48) 99876-8899,vendas@frioesalianca.com.br,Rua Felipe Schmidt, 890 - Centro, Florianópolis - SC
+Casa de Carnes Popular ME,13.741.852/0001-89,(85) 3232-9900,contato@carnesepopular.com.br,Avenida da Universidade, 1200 - Benfica, Fortaleza - CE
+Cerealista Estrela LTDA,72.159.753/0001-90,(62) 99876-1122,comercial@cerealistaestrela.com.br,Rua 4, 890 - Setor Central, Goiânia - GO
+Empório Bom Preço EIRELI,38.963.852/0001-01,(71) 3232-3344,pedidos@emporiobompreco.com.br,Avenida Juracy Magalhães, 1200 - Rio Vermelho, Salvador - BA
+Doces e Balas União MEI,67.852.147/0001-12,(81) 99876-2233,atendimento@docesuniao.com.br,Avenida Caxangá, 890 - Cordeiro, Recife - PE
+Limpeza e Higiene do Norte S/A,25.951.753/0001-23,(92) 3232-5566,vendas@limpezadonorte.com.br,Avenida Autaz Mirim, 1200 - Jorge Teixeira, Manaus - AM
+Congelados Vitória LTDA,81.357.159/0001-34,(27) 99876-4455,contato@congeladosvitoria.com.br,Avenida Vitória, 890 - Centro, Vitória - ES
+Distribuidora de Alimentos Aurora ME,44.258.741/0001-45,(19) 3232-7788,comercial@distribuidoraaurora.com.br,Avenida Moraes Salles, 1200 - Centro, Campinas - SP
+Atacadista de Bebidas Sol Nascente EIRELI,58.852.963/0001-56,(84) 99876-6677,pedidos@bebidassol.com.br,Avenida Nevaldo Rocha, 890 - Tirol, Natal - RN
+Hortifruti Nacional MEI,16.741.852/0001-67,(91) 3232-9900,atendimento@hortifrutinacional.com.br,Avenida Governador José Malcher, 1200 - Nazaré, Belém - PA
+Panificadora Central ME,73.159.753/0001-78,(67) 99876-8899,vendas@panificadoracentral.com.br,Avenida Costa e Silva, 890 - Jardim dos Estados, Campo Grande - MS
+Frios e Laticínios Boa Vista LTDA,39.963.852/0001-89,(65) 3232-1122,contato@friosboavista.com.br,Avenida Fernando Corrêa, 1200 - Coxipó, Cuiabá - MT
+Casa de Carnes Bom Preço EIRELI,62.852.147/0001-90,(98) 99876-9900,comercial@carnesbompreco.com.br,Avenida Jerônimo de Albuquerque, 890 - Cohama, São Luís - MA
+Cerealista Premium MEI,27.951.753/0001-01,(86) 3232-3344,pedidos@cerealistapremium.com.br,Avenida João XXIII, 1200 - Noivos, Teresina - PI
+Empório do Norte S/A,85.357.159/0001-12,(48) 99876-1122,atendimento@emporiodonorte.com.br,Rua Joinville, 890 - Centro, Joinville - SC
+Doces e Balas do Norte ME,41.258.741/0001-23,(11) 3232-5566,vendas@docesdonorte.com.br,Avenida Ibirapuera, 3400 - Moema, São Paulo - SP
+Limpeza e Higiene Progresso LTDA,57.852.963/0001-34,(21) 99876-2233,contato@limpezaprogresso.com.br,Avenida Atlântica, 890 - Copacabana, Rio de Janeiro - RJ
+Congelados Bom Preço EIRELI,19.741.852/0001-45,(31) 3232-7788,comercial@congeladosbompreco.com.br,Avenida Amazonas, 1200 - Centro, Belo Horizonte - MG
+Distribuidora de Bebidas Vitória MEI,74.159.753/0001-56,(41) 99876-4455,pedidos@bebidasvitoria.com.br,Avenida Sete de Setembro, 3400 - Batel, Curitiba - PR
+Atacadista de Alimentos Aurora ME,36.963.852/0001-67,(51) 3232-9900,atendimento@atacadistaaurora.com.br,Avenida Farrapos, 1200 - Floresta, Porto Alegre - RS
+Hortifruti Estrela S/A,68.852.147/0001-78,(61) 99876-6677,vendas@hortifrutiestrela.com.br,SHCGN 708, Bloco B, Loja 4 - Asa Norte, Brasília - DF
+Panificadora do Sul LTDA,24.951.753/0001-89,(48) 3232-1122,contato@panificadoradosul.com.br,Avenida Rio Branco, 890 - Centro, Florianópolis - SC
+Frios e Laticínios Progresso MEI,82.357.159/0001-90,(85) 99876-8899,comercial@friosprogresso.com.br,Avenida Santos Dumont, 1200 - Aldeota, Fortaleza - CE
+Casa de Carnes Nacional EIRELI,43.258.741/0001-01,(62) 3232-3344,pedidos@carnesnacional.com.br,Avenida 85, 890 - Setor Marista, Goiânia - GO
+Cerealista Real ME,56.852.963/0001-12,(71) 99876-9900,atendimento@cerealistareal.com.br,Avenida ACM, 1200 - Itaigara, Salvador - BA
+Empório Vitória LTDA,18.741.852/0001-23,(81) 3232-5566,vendas@emporiovitoria.com.br,Avenida Conselheiro Aguiar, 890 - Boa Viagem, Recife - PE
+Doces e Balas Nacional MEI,75.159.753/0001-34,(92) 99876-1122,contato@docesnacional.com.br,Avenida Brasil, 1200 - Compensa, Manaus - AM
+Limpeza e Higiene Aliança S/A,32.963.852/0001-45,(27) 3232-7788,comercial@limpezaalianca.com.br,Avenida Leitão da Silva, 890 - Goiabeiras, Vitória - ES
+Congelados Estrela ME,61.852.147/0001-56,(19) 99876-2233,pedidos@congeladosestrela.com.br,Avenida Ruy Rodriguez, 1200 - Jardim Aeroporto, Campinas - SP
+Distribuidora de Alimentos Central EIRELI,29.951.753/0001-67,(84) 3232-9900,atendimento@distribuidoracentral.com.br,Avenida Hermes da Fonseca, 890 - Tirol, Natal - RN
+Atacadista de Bebidas do Norte MEI,87.357.159/0001-78,(91) 99876-3344,vendas@bebidasdonorte.com.br,Avenida Duque de Caxias, 1200 - Marco, Belém - PA
+Hortifruti São José LTDA,45.258.741/0001-89,(67) 3232-1122,contato@hortifrutisaojose.com.br,Avenida Mato Grosso, 890 - Centro, Campo Grande - MS
+Panificadora Premium ME,52.852.963/0001-90,(65) 99876-4455,comercial@panificadorapremium.com.br,Rua Comandante Costa, 1200 - Centro, Cuiabá - MT
+Frios e Laticínios do Norte EIRELI,21.741.852/0001-01,(98) 3232-5566,pedidos@friosdonorte.com.br,Avenida Daniel de La Touche, 890 - Cohama, São Luís - MA
+Casa de Carnes do Sul MEI,79.159.753/0001-12,(86) 99876-6677,atendimento@carnesdosul.com.br,Avenida Barão de Gurguéia, 1200 - Pirajá, Teresina - PI
+Cerealista Boa Vista S/A,34.963.852/0001-23,(48) 3232-7788,vendas@cerealistaboavista.com.br,Rua Visconde de Taunay, 890 - Centro, Joinville - SC
+Empório Estrela ME,66.852.147/0001-34,(11) 99876-8899,contato@emporioestrela.com.br,Avenida Roque Petroni Jr., 1200 - Brooklin, São Paulo - SP
+Doces e Balas Central LTDA,23.951.753/0001-45,(21) 3232-9900,comercial@docescentral.com.br,Rua Visconde de Pirajá, 890 - Ipanema, Rio de Janeiro - RJ
+Limpeza e Higiene Vitória MEI,81.357.159/0001-56,(31) 99876-1122,pedidos@limpezavitoria.com.br,Avenida Raja Gabaglia, 1200 - Estoril, Belo Horizonte - MG
+Congelados Popular EIRELI,47.258.741/0001-67,(41) 3232-3344,atendimento@congeladospopular.com.br,Rua Comendador Araújo, 890 - Batel, Curitiba - PR
+Distribuidora de Bebidas Central ME,15.852.963/0001-78,(51) 99876-2233,vendas@bebidascentral.com.br,Avenida Independência, 1200 - Independência, Porto Alegre - RS
+Atacadista de Alimentos Vitória LTDA,72.741.852/0001-89,(61) 3232-5566,contato@atacadistavitoria.com.br,SQN 206, Bloco C, Loja 5 - Asa Norte, Brasília - DF
+Hortifruti Aurora MEI,38.159.753/0001-90,(48) 99876-4455,comercial@hortifrutiaurora.com.br,Avenida Mauro Ramos, 890 - Centro, Florianópolis - SC
+Panificadora Boa Vista S/A,54.963.852/0001-01,(85) 3232-7788,pedidos@panificadoraboavista.com.br,Avenida 13 de Maio, 1200 - Benfica, Fortaleza - CE
+Frios e Laticínios Bom Preço ME,26.852.147/0001-12,(62) 99876-6677,atendimento@friosbompreco.com.br,Avenida Portugal, 890 - Setor Marista, Goiânia - GO
+Casa de Carnes Aurora EIRELI,83.951.753/0001-23,(71) 3232-9900,vendas@carnesaurora.com.br,Avenida Manoel Dias da Silva, 1200 - Pituba, Salvador - BA
+Cerealista Central MEI,41.357.159/0001-34,(81) 99876-8899,contato@cerealistacentral.com.br,Rua do Imperador, 890 - Santo Antônio, Recife - PE
+Empório Express LTDA,68.258.741/0001-45,(92) 3232-1122,comercial@emporioexpress.com.br,Avenida Ayrão, 1200 - Praça 14, Manaus - AM
+Doces e Balas Aliança ME,17.852.963/0001-56,(27) 99876-2233,pedidos@docesalianca.com.br,Rua Chapot Presvot, 890 - Praia do Canto, Vitória - ES
+Limpeza e Higiene Estrela EIRELI,75.741.852/0001-67,(19) 3232-3344,atendimento@limpezaestrela.com.br,Avenida Barão de Itapura, 1200 - Guanabara, Campinas - SP
+Congelados Boa Vista MEI,33.159.753/0001-78,(84) 99876-4455,vendas@congeladosboavista.com.br,Avenida Afonso Pena, 890 - Tirol, Natal - RN
+Distribuidora de Alimentos do Sul S/A,59.963.852/0001-89,(91) 3232-5566,contato@distribuidoradosul.com.br,Avenida Pedro Álvares Cabral, 1200 - Umarizal, Belém - PA
+Atacadista de Bebidas Boa Vista LTDA,22.852.147/0001-90,(67) 99876-6677,comercial@bebidasboavista.com.br,Avenida Gury Marques, 890 - Universitário, Campo Grande - MS
+Hortifruti Premium MEI,86.951.753/0001-01,(65) 3232-7788,pedidos@hortifrutipremium.com.br,Avenida Miguel Sutil, 1200 - Jardim Leblon, Cuiabá - MT
+Panificadora Express ME,48.357.159/0001-12,(98) 99876-8899,atendimento@panificadoraexpress.com.br,Avenida Colares Moreira, 890 - Renascença, São Luís - MA
+Frios e Laticínios Vitória EIRELI,14.258.741/0001-23,(86) 3232-9900,vendas@friosvitoria.com.br,Avenida Frei Serafim, 1200 - Centro, Teresina - PI
+Casa de Carnes Aliança LTDA,71.852.963/0001-34,(48) 99876-1122,contato@carnesalianca.com.br,Rua Otto Boehm, 890 - América, Joinville - SC
+Cerealista Progresso MEI,37.741.852/0001-45,(11) 3232-3344,comercial@cerealistaprogresso.com.br,Avenida Interlagos, 1200 - Interlagos, São Paulo - SP
+Empório União S/A,53.159.753/0001-56,(21) 99876-4455,pedidos@emporiouniao.com.br,Rua Farme de Amoedo, 890 - Ipanema, Rio de Janeiro - RJ
+Doces e Balas Premium ME,25.963.852/0001-67,(31) 3232-5566,atendimento@docespremium.com.br,Avenida Sinfrônio Brochado, 1200 - Barreiro, Belo Horizonte - MG
+Limpeza e Higiene São José EIRELI,84.852.147/0001-78,(41) 99876-6677,vendas@limpezasaojose.com.br,Avenida Victor Ferreira do Amaral, 890 - Tarumã, Curitiba - PR
+Congelados Central MEI,42.951.753/0001-89,(51) 3232-7788,contato@congeladoscentral.com.br,Avenida Cavalhada, 1200 - Cavalhada, Porto Alegre - RS
+Distribuidora de Bebidas Popular LTDA,69.357.159/0001-90,(61) 99876-8899,comercial@bebidaspopular.com.br,SCS Quadra 4, Bloco B, Loja 2 - Asa Sul, Brasília - DF
+Atacadista de Alimentos Premium ME,18.258.741/0001-01,(48) 3232-9900,pedidos@atacadistapremium.com.br,Rua Tenente Silveira, 890 - Centro, Florianópolis - SC
+Hortifruti Real MEI,76.852.963/0001-12,(85) 99876-1122,atendimento@hortifrutireal.com.br,Avenida Pontes Vieira, 1200 - Dionísio Torres, Fortaleza - CE
+Panificadora Vitória S/A,34.741.852/0001-23,(62) 3232-3344,vendas@panificadoravitoria.com.br,Rua 15, 890 - Setor Oeste, Goiânia - GO
+Frios e Laticínios Boa Vista EIRELI,58.159.753/0001-34,(71) 99876-4455,contato@friosboavista.com.br,Avenida Otávio Mangabeira, 1200 - Boca do Rio, Salvador - BA
+Casa de Carnes do Norte LTDA,21.963.852/0001-45,(81) 3232-5566,comercial@carnesdonorte.com.br,Avenida Mascarenhas de Moraes, 890 - Imbiribeira, Recife - PE
+Cerealista Bom Preço MEI,87.852.147/0001-56,(92) 99876-6677,pedidos@cerealistabompreco.com.br,Avenida Epaminondas, 1200 - Flores, Manaus - AM
+Empório Progresso ME,49.951.753/0001-67,(27) 3232-7788,atendimento@emporioprogresso.com.br,Avenida Marechal Campos, 890 - Maruípe, Vitória - ES
+Doces e Balas Vitória S/A,13.357.159/0001-78,(19) 99876-8899,vendas@docesvitoria.com.br,Avenida Albino José Barbosa de Oliveira, 1200 - Barão Geraldo, Campinas - SP
+Limpeza e Higiene do Sul LTDA,67.258.741/0001-89,(84) 3232-9900,contato@limpezadosul.com.br,Avenida Romualdo Galvão, 890 - Lagoa Nova, Natal - RN
+Congelados União EIRELI,39.852.963/0001-90,(91) 99876-1122,comercial@congeladosuniao.com.br,Travessa Mauriti, 1200 - Pedreira, Belém - PA
+Distribuidora de Alimentos Estrela MEI,85.741.852/0001-01,(67) 3232-3344,pedidos@distribuidoraestrela.com.br,Rua Brilhante, 890 - Vila Progresso, Campo Grande - MS
+Atacadista de Bebidas Aurora ME,27.159.753/0001-12,(65) 99876-4455,atendimento@atacadistaaurora.com.br,Avenida Rubens de Mendonça, 1200 - Alvorada, Cuiabá - MT
+Hortifruti Central LTDA,64.963.852/0001-23,(98) 3232-5566,vendas@hortifruticentral.com.br,Avenida dos Franceses, 890 - Renascença, São Luís - MA
+Panificadora Popular ME,52.852.147/0001-34,(86) 99876-6677,contato@panificadorapopular.com.br,Avenida Higino Cunha, 1200 - Ilhotas, Teresina - PI
+Frios e Laticínios Nacional EIRELI,19.951.753/0001-45,(48) 3232-7788,comercial@friosnacional.com.br,Rua São Bento, 890 - Centro, Joinville - SC
+Casa de Carnes Premium MEI,78.357.159/0001-56,(11) 99876-8899,pedidos@carnespremium.com.br,Avenida Giovanni Gronchi, 1200 - Vila Andrade, São Paulo - SP
+Cerealista Aliança S/A,36.258.741/0001-67,(21) 3232-9900,atendimento@cerealistaalianca.com.br,Rua Nossa Senhora de Copacabana, 890 - Copacabana, Rio de Janeiro - RJ
+Empório Boa Vista LTDA,43.852.963/0001-78,(31) 99876-1122,vendas@emporioboavista.com.br,Avenida Cristiano Machado, 1200 - Cidade Nova, Belo Horizonte - MG
+Doces e Balas Real ME,16.741.852/0001-89,(41) 3232-3344,contato@docesreal.com.br,Avenida das Torres, 890 - Jardim das Américas, Curitiba - PR
+Limpeza e Higiene Bom Preço MEI,82.159.753/0001-90,(51) 99876-4455,comercial@limpezabom.com.br,Avenida Ipiranga, 1200 - Azenha, Porto Alegre - RS
+Congelados Vitória EIRELI,38.963.852/0001-01,(61) 3232-5566,pedidos@congeladosvitoria.com.br,SHIN QL 10, Bloco A, Loja 3 - Lago Norte, Brasília - DF
+Distribuidora de Bebidas Aliança ME,74.852.147/0001-12,(48) 99876-6677,atendimento@bebidasalianca.com.br,Rua Vidal Ramos, 890 - Centro, Florianópolis - SC
+Atacadista de Alimentos Express LTDA,22.951.753/0001-23,(85) 3232-7788,vendas@atacadistaexpress.com.br,Avenida Bezerra de Menezes, 1200 - São Gerardo, Fortaleza - CE
+Hortifruti do Norte MEI,61.357.159/0001-34,(62) 99876-8899,contato@hortifrutidonorte.com.br,Avenida 136, 890 - Setor Sul, Goiânia - GO
+Panificadora Real S/A,45.258.741/0001-45,(71) 3232-9900,comercial@panificadorareal.com.br,Avenida Garibaldi, 1200 - Ondina, Salvador - BA
+Frios e Laticínios Premium EIRELI,29.852.963/0001-56,(81) 99876-1122,pedidos@friosepremium.com.br,Rua da Harmonia, 890 - Casa Amarela, Recife - PE
+Casa de Carnes Bom Preço ME,73.741.852/0001-67,(92) 3232-3344,atendimento@carnesbompreco.com.br,Avenida Sete de Setembro, 1200 - Centro, Manaus - AM
+Cerealista do Sul MEI,17.159.753/0001-78,(27) 99876-4455,vendas@cerealistadosul.com.br,Avenida Carlos Lindenberg, 890 - Centro, Vitória - ES
+Empório Aurora LTDA,54.963.852/0001-89,(19) 3232-5566,contato@emporioaurora.com.br,Avenida Brasil, 1200 - Jardim Chapadão, Campinas - SP
+Doces e Balas Bom Preço ME,31.852.147/0001-90,(84) 99876-6677,comercial@docesbompreco.com.br,Avenida Interventor Mário Câmara, 890 - Dix-Sept Rosado, Natal - RN
+Limpeza e Higiene Real MEI,89.951.753/0001-01,(91) 3232-7788,pedidos@limpezareal.com.br,Avenida Alcindo Cacela, 1200 - Umarizal, Belém - PA
+Congelados Aliança EIRELI,26.357.159/0001-12,(67) 99876-8899,atendimento@congeladosalianca.com.br,Avenida Bandeirantes, 890 - Vila Olinda, Campo Grande - MS
+Distribuidora de Alimentos Vitória S/A,63.258.741/0001-23,(65) 3232-9900,vendas@distribuidoravitoria.com.br,Avenida Historiador Rubens de Mendonça, 1200 - Bosque da Saúde, Cuiabá - MT
+Atacadista de Bebidas Estrela LTDA,47.852.963/0001-34,(98) 99876-1122,contato@bebidasestrela.com.br,Avenida Guajajaras, 890 - São Cristóvão, São Luís - MA
+Hortifruti Express ME,12.741.852/0001-45,(86) 3232-3344,comercial@hortifrutiexpress.com.br,Avenida Universitária, 1200 - Ininga, Teresina - PI
+Panificadora União MEI,79.159.753/0001-56,(48) 99876-4455,pedidos@panificadorauniao.com.br,Rua Rio Branco, 890 - Centro, Joinville - SC
+Frios e Laticínios Central EIRELI,35.963.852/0001-67,(11) 3232-5566,atendimento@frioscentral.com.br,Avenida Guarapiranga, 1200 - Jardim São Luís, São Paulo - SP
+Casa de Carnes Boa Vista S/A,57.852.147/0001-78,(21) 99876-6677,vendas@carnesboavista.com.br,Avenida das Américas, 890 - Barra da Tijuca, Rio de Janeiro - RJ
+Cerealista do Norte ME,24.951.753/0001-89,(31) 3232-7788,contato@cerealistadonorte.com.br,Avenida Abílio Machado, 1200 - Santa Efigênia, Belo Horizonte - MG
+Empório Boa Vista MEI,81.357.159/0001-90,(41) 99876-8899,comercial@emporioboavista.com.br,Rua Padre Anchieta, 890 - Bigorrilho, Curitiba - PR
+Doces e Balas Vitória EIRELI,46.258.741/0001-01,(51) 3232-9900,pedidos@docesvitoria.com.br,Avenida Azenha, 1200 - Azenha, Porto Alegre - RS
+Limpeza e Higiene Estrela LTDA,69.852.963/0001-12,(61) 99876-1122,atendimento@limpezaestrela.com.br,SCLRN 712, Bloco D, Loja 1 - Asa Norte, Brasília - DF
+Congelados Real ME,18.741.852/0001-23,(48) 3232-3344,vendas@congeladosreal.com.br,Avenida Beira Mar Norte, 890 - Agronômica, Florianópolis - SC
+Distribuidora de Bebidas União MEI,73.159.753/0001-34,(85) 99876-4455,contato@bebidasuniao.com.br,Avenida Godofredo Maciel, 1200 - Maraponga, Fortaleza - CE
+Atacadista de Alimentos Bom Preço EIRELI,32.963.852/0001-45,(62) 3232-5566,comercial@atacadistabompreco.com.br,Avenida Perimetral, 890 - Setor Coimbra, Goiânia - GO
+Hortifruti do Sul S/A,58.852.147/0001-56,(71) 99876-6677,pedidos@hortifrutidosul.com.br,Avenida Bonocô, 1200 - IAPI, Salvador - BA
+Panificadora Premium ME,25.951.753/0001-67,(81) 3232-7788,atendimento@panificadorapremium.com.br,Rua Real da Torre, 890 - Madalena, Recife - PE
+Frios e Laticínios Express MEI,84.357.159/0001-78,(92) 99876-8899,vendas@friosepress.com.br,Avenida Djalma Batista, 1200 - Chapada, Manaus - AM
+Casa de Carnes Central LTDA,41.258.741/0001-89,(27) 3232-9900,contato@carnescentral.com.br,Avenida Nossa Senhora da Penha, 890 - Praia do Canto, Vitória - ES
+Cerealista Vitória EIRELI,66.852.963/0001-90,(19) 99876-1122,comercial@cerealistavitoria.com.br,Avenida Andrade Neves, 1200 - Botafogo, Campinas - SP
+Empório Popular MEI,19.741.852/0001-01,(84) 3232-3344,pedidos@emporiopopular.com.br,Avenida Bernardo Vieira, 890 - Tirol, Natal - RN
+Doces e Balas Progresso S/A,77.159.753/0001-12,(91) 99876-4455,atendimento@docesprogresso.com.br,Avenida Augusto Montenegro, 1200 - Parque Verde, Belém - PA
+Limpeza e Higiene Aliança ME,33.963.852/0001-23,(67) 3232-5566,vendas@limpezaalianca.com.br,Avenida Três Barras, 890 - Nova Bahia, Campo Grande - MS
+Congelados Estrela LTDA,62.852.147/0001-34,(65) 99876-6677,contato@congeladosestrela.com.br,Avenida Beira Rio, 1200 - Porto, Cuiabá - MT
+Distribuidora de Alimentos Nacional MEI,27.951.753/0001-45,(98) 3232-7788,comercial@distribuidoranacional.com.br,Avenida Getúlio Vargas, 890 - Monte Castelo, São Luís - MA
+Atacadista de Bebidas Central EIRELI,88.357.159/0001-56,(86) 99876-8899,pedidos@bebidascentral.com.br,Avenida Miguel Rosa, 1200 - Centro, Teresina - PI
+Hortifruti Bom Preço ME,14.258.741/0001-67,(48) 3232-9900,atendimento@hortifrutibompreco.com.br,Rua XV de Novembro, 890 - Centro, Joinville - SC
+Panificadora Aurora MEI,71.852.963/0001-78,(11) 99876-1122,vendas@panificadoraaurora.com.br,Avenida Ricardo Jafet, 1200 - Vila Clementino, São Paulo - SP
+Frios e Laticínios Popular S/A,48.741.852/0001-89,(21) 3232-3344,contato@friosepopular.com.br,Estrada da Gávea, 890 - São Conrado, Rio de Janeiro - RJ
+Casa de Carnes Estrela LTDA,23.159.753/0001-90,(31) 99876-4455,comercial@carnesestrela.com.br,Avenida dos Andradas, 1200 - Santa Efigênia, Belo Horizonte - MG
+Cerealista Central MEI,85.963.852/0001-01,(41) 3232-5566,pedidos@cerealistacentral.com.br,Rua Padre Ildefonso, 890 - Centro Cívico, Curitiba - PR
+Empório Real EIRELI,39.852.147/0001-12,(51) 99876-6677,atendimento@emporioreal.com.br,Avenida Assis Brasil, 1200 - Cristo Redentor, Porto Alegre - RS
+Doces e Balas Express ME,13.951.753/0001-23,(61) 3232-7788,vendas@docesexpress.com.br,SCES Trecho 2, Loja 5 - Setor de Clubes Sul, Brasília - DF
+Limpeza e Higiene Nacional MEI,76.357.159/0001-34,(48) 99876-8899,contato@limpezanacional.com.br,Avenida Governador Ivo Silveira, 1200 - Capoeiras, Florianópolis - SC
+Congelados Premium S/A,31.258.741/0001-45,(85) 3232-9900,comercial@congeladospremium.com.br,Avenida Engenheiro Santana Júnior, 890 - Papicu, Fortaleza - CE
+Distribuidora de Bebidas Boa Vista LTDA,64.852.963/0001-56,(62) 99876-1122,pedidos@bebidasboavista.com.br,Avenida Castelo Branco, 1200 - Setor Ferroviário, Goiânia - GO
+Atacadista de Alimentos Vitória MEI,28.741.852/0001-67,(71) 3232-3344,atendimento@atacadistavitoria.com.br,Avenida Dorival Caymmi, 890 - Itapuã, Salvador - BA
+Hortifruti Estrela EIRELI,52.159.753/0001-78,(81) 99876-4455,vendas@hortifrutiestrela.com.br,Avenida Domingos Ferreira, 1200 - Boa Viagem, Recife - PE
+Panificadora Aliança ME,87.963.852/0001-89,(92) 3232-5566,contato@panificadoraalianca.com.br,Avenida Tefé, 890 - Japiim, Manaus - AM
+Frios e Laticínios Real LTDA,45.852.147/0001-90,(27) 99876-6677,comercial@friosreal.com.br,Rua Aleixo Netto, 1200 - Praia do Canto, Vitória - ES
+Casa de Carnes do Sul MEI,19.951.753/0001-01,(19) 3232-7788,pedidos@carnesdosul.com.br,Avenida Andrade Neves, 890 - Botafogo, Campinas - SP
+Cerealista Premium EIRELI,73.357.159/0001-12,(84) 99876-8899,atendimento@cerealistapremium.com.br,Avenida Senador Salgado Filho, 1200 - Lagoa Nova, Natal - RN
+Empório Central ME,34.258.741/0001-23,(91) 3232-9900,vendas@emporiocentral.com.br,Travessa Barão do Triunfo, 890 - Marco, Belém - PA
+Doces e Balas Boa Vista S/A,81.852.963/0001-34,(67) 99876-1122,contato@docesboavista.com.br,Avenida Ceará, 1200 - Jardim dos Estados, Campo Grande - MS
+Limpeza e Higiene Central MEI,26.741.852/0001-45,(65) 3232-3344,comercial@limpezacentral.com.br,Rua Barão de Melgaço, 890 - Centro, Cuiabá - MT
+Congelados Bom Preço LTDA,59.159.753/0001-56,(98) 99876-4455,pedidos@congeladosbompreco.com.br,Avenida São Luís Rei de França, 1200 - Turu, São Luís - MA
+Distribuidora de Alimentos Progresso ME,43.963.852/0001-67,(86) 3232-5566,atendimento@distribuidoraprogresso.com.br,Avenida Homero Castelo Branco, 890 - Jóquei, Teresina - PI
+Atacadista de Bebidas Real EIRELI,15.852.147/0001-78,(48) 99876-6677,vendas@bebidasreal.com.br,Rua Doutor João Colin, 1200 - América, Joinville - SC
+Hortifruti Nacional MEI,77.951.753/0001-89,(11) 3232-7788,contato@hortifrutinacional.com.br,Avenida Nações Unidas, 890 - Brooklin, São Paulo - SP
+Panificadora do Norte ME,38.357.159/0001-90,(21) 99876-8899,comercial@panificadoradonorte.com.br,Rua Dias da Cruz, 1200 - Méier, Rio de Janeiro - RJ
+Frios e Laticínios Aurora LTDA,61.258.741/0001-01,(31) 3232-9900,pedidos@friosaurora.com.br,Avenida Silva Lobo, 890 - Nova Granada, Belo Horizonte - MG
+Casa de Carnes Vitória MEI,24.852.963/0001-12,(41) 99876-1122,atendimento@carnesvitoria.com.br,Avenida Manoel Ribas, 1200 - Mercês, Curitiba - PR
+Cerealista Express EIRELI,82.741.852/0001-23,(51) 3232-3344,vendas@cerealistaexpress.com.br,Avenida Sertório, 890 - Navegantes, Porto Alegre - RS
+Empório Nacional ME,49.159.753/0001-34,(61) 99876-4455,contato@emporionacional.com.br,SHN Quadra 2, Bloco F, Loja 4 - Asa Norte, Brasília - DF
+Doces e Balas Central LTDA,17.963.852/0001-45,(48) 3232-5566,comercial@docescentral.com.br,Avenida Hercílio Luz, 1200 - Centro, Florianópolis - SC
+Limpeza e Higiene Premium S/A,63.852.147/0001-56,(85) 99876-6677,pedidos@limpezapremium.com.br,Avenida Duque de Caxias, 890 - Centro, Fortaleza - CE
+Congelados do Norte MEI,35.951.753/0001-67,(62) 3232-7788,atendimento@congeladosdonorte.com.br,Avenida Independência, 1200 - Setor Central, Goiânia - GO
+Distribuidora de Alimentos Boa Vista ME,78.357.159/0001-78,(71) 99876-8899,vendas@distribuidoraboavista.com.br,Avenida Paulo VI, 890 - Itaigara, Salvador - BA
+Atacadista de Bebidas Premium EIRELI,42.258.741/0001-89,(81) 3232-9900,contato@bebidaspremium.com.br,Avenida Norte, 1200 - Casa Forte, Recife - PE
+Hortifruti Vitória MEI,21.852.963/0001-90,(92) 99876-1122,comercial@hortifrutivitoria.com.br,Avenida Cosme Ferreira, 890 - São José, Manaus - AM
+Panificadora Central LTDA,67.741.852/0001-01,(27) 3232-3344,pedidos@panificadoracentral.com.br,Rua José de Almeida, 1200 - Centro, Vitória - ES
+Frios e Laticínios do Sul ME,46.159.753/0001-12,(19) 99876-4455,atendimento@friosdosul.com.br,Avenida das Amoreiras, 890 - Parque Industrial, Campinas - SP
+Casa de Carnes Aliança MEI,53.963.852/0001-23,(84) 3232-5566,vendas@carnesalianca.com.br,Avenida Capitão Mor Gouveia, 1200 - Cidade da Esperança, Natal - RN
+Cerealista Bom Preço EIRELI,29.852.147/0001-34,(91) 99876-6677,contato@cerealistabompreco.com.br,Avenida José Bonifácio, 890 - Guamá, Belém - PA
+Empório Estrela S/A,74.951.753/0001-45,(67) 3232-7788,comercial@emporioestrela.com.br,Avenida Afonso Pena, 1200 - Amambaí, Campo Grande - MS
+Doces e Balas Real MEI,18.357.159/0001-56,(65) 99876-8899,pedidos@docesreal.com.br,Avenida das Torres, 890 - Jardim Itália, Cuiabá - MT
+Limpeza e Higiene do Sul ME,68.258.741/0001-67,(98) 3232-9900,atendimento@limpezadosul.com.br,Avenida Kennedy, 1200 - Olho d'Água, São Luís - MA
+Congelados Central LTDA,37.852.963/0001-78,(86) 99876-1122,vendas@congeladoscentral.com.br,Avenida Pedro Freitas, 890 - São Pedro, Teresina - PI
+Distribuidora de Alimentos Aliança EIRELI,55.741.852/0001-89,(48) 3232-3344,contato@distribuidoraalianca.com.br,Rua Marechal Deodoro, 1200 - Centro, Joinville - SC
+Atacadista de Bebidas Popular MEI,22.159.753/0001-90,(11) 99876-4455,comercial@bebidaspopular.com.br,Avenida Ipiranga, 890 - República, São Paulo - SP
+Hortifruti Premium S/A,81.963.852/0001-01,(21) 3232-5566,pedidos@hortifrutipremium.com.br,Avenida Ataulfo de Paiva, 1200 - Leblon, Rio de Janeiro - RJ
+Panificadora Progresso ME,44.852.147/0001-12,(31) 99876-6677,atendimento@panificadoraprogresso.com.br,Avenida Amazonas, 890 - Santo Agostinho, Belo Horizonte - MG
+Frios e Laticínios Bom Preço MEI,16.951.753/0001-23,(41) 3232-7788,vendas@friosbompreco.com.br,Avenida Sete de Setembro, 1200 - Centro, Curitiba - PR
+Casa de Carnes do Norte LTDA,72.357.159/0001-34,(51) 99876-8899,contato@carnesdonorte.com.br,Avenida Bento Gonçalves, 890 - Agronomia, Porto Alegre - RS
+Cerealista Vitória ME,39.258.741/0001-45,(61) 3232-9900,comercial@cerealistavitoria.com.br,SCRN 702, Bloco B, Loja 3 - Asa Norte, Brasília - DF
+Empório Boa Vista EIRELI,84.852.963/0001-56,(48) 99876-1122,pedidos@emporioboavista.com.br,Avenida Madre Benvenuta, 1200 - Santa Mônica, Florianópolis - SC
+Doces e Balas Nacional MEI,27.741.852/0001-67,(85) 3232-3344,atendimento@docesnacional.com.br,Avenida dos Expedicionários, 890 - Montese, Fortaleza - CE
+Limpeza e Higiene Aurora S/A,51.159.753/0001-78,(62) 99876-4455,vendas@limpezaaurora.com.br,Avenida 24 de Outubro, 1200 - Setor Oeste, Goiânia - GO
+Congelados Boa Vista ME,33.963.852/0001-89,(71) 3232-5566,contato@congeladosboavista.com.br,Rua Chile, 890 - Comércio, Salvador - BA
+Distribuidora de Alimentos do Norte LTDA,79.852.147/0001-90,(81) 99876-6677,comercial@distribuidoradonorte.com.br,Avenida Beberibe, 1200 - Arruda, Recife - PE
+Atacadista de Bebidas Vitória MEI,14.951.753/0001-01,(92) 3232-7788,pedidos@bebidasvitoria.com.br,Avenida Grande Circular, 890 - São José, Manaus - AM
+Hortifruti Estrela EIRELI,66.357.159/0001-12,(27) 99876-8899,atendimento@hortifrutiestrela.com.br,Avenida Rio Branco, 1200 - Centro, Vitória - ES
+Panificadora Bom Preço ME,48.258.741/0001-23,(19) 3232-9900,vendas@panificadorabompreco.com.br,Avenida Norte-Sul, 890 - Centro, Campinas - SP
+Frios e Laticínios Central MEI,25.852.963/0001-34,(84) 99876-1122,contato@frioscentral.com.br,Avenida Jaguarari, 1200 - Petrópolis, Natal - RN
+Casa de Carnes Popular S/A,83.741.852/0001-45,(91) 3232-3344,comercial@carnespupular.com.br,Avenida Cipriano Santos, 890 - Telégrafo, Belém - PA
+Cerealista Aliança ME,31.159.753/0001-56,(67) 99876-4455,pedidos@cerealistaalianca.com.br,Rua 26 de Agosto, 1200 - Centro, Campo Grande - MS
+Empório do Sul EIRELI,57.963.852/0001-67,(65) 3232-5566,atendimento@emporiodosul.com.br,Avenida Getúlio Vargas, 890 - Centro, Cuiabá - MT
+Doces e Balas Aurora MEI,19.852.147/0001-78,(98) 99876-6677,vendas@docesaurora.com.br,Avenida Colares Moreira, 1200 - Jardim Renascença, São Luís - MA
+Limpeza e Higiene Real LTDA,73.951.753/0001-89,(86) 3232-7788,contato@limpezareal.com.br,Avenida Barão de Gurguéia, 890 - Pirajá, Teresina - PI
+Congelados Estrela ME,42.357.159/0001-90,(48) 99876-8899,comercial@congeladosestrela.com.br,Rua Blumenau, 1200 - Centro, Joinville - SC
+Distribuidora de Alimentos Premium MEI,28.258.741/0001-01,(11) 3232-9900,pedidos@distribuidorapremium.com.br,Avenida Luís Carlos Berrini, 890 - Brooklin, São Paulo - SP
+Atacadista de Bebidas do Sul EIRELI,64.852.963/0001-12,(21) 99876-1122,atendimento@bebidasdosul.com.br,Rua Uruguaiana, 1200 - Centro, Rio de Janeiro - RJ
+Hortifruti Boa Vista ME,37.741.852/0001-23,(31) 3232-3344,vendas@hortifrutiboavista.com.br,Avenida do Contorno, 890 - Funcionários, Belo Horizonte - MG
+Panificadora Nacional S/A,85.159.753/0001-34,(41) 99876-4455,contato@panificadoranacional.com.br,Avenida Água Verde, 1200 - Água Verde, Curitiba - PR
+Frios e Laticínios Aliança MEI,23.963.852/0001-45,(51) 3232-5566,comercial@friosalianca.com.br,Avenida Carlos Gomes, 890 - Boa Vista, Porto Alegre - RS
+Casa de Carnes Premium ME,71.852.147/0001-56,(61) 99876-6677,pedidos@carnespremium.com.br,SQNW 304, Bloco C, Loja 2 - Asa Norte, Brasília - DF
+Cerealista do Sul LTDA,46.951.753/0001-67,(48) 3232-7788,atendimento@cerealistadosul.com.br,Avenida Presidente Kennedy, 1200 - Barreiros, São José - SC
+Empório Express MEI,32.357.159/0001-78,(85) 99876-8899,vendas@emporioexpress.com.br,Avenida Domingos Olímpio, 890 - Benfica, Fortaleza - CE
+Doces e Balas Boa Vista EIRELI,68.258.741/0001-89,(62) 3232-9900,contato@docesboavista.com.br,Avenida Anhanguera, 1200 - Campinas, Goiânia - GO
+Limpeza e Higiene Vitória S/A,15.852.963/0001-90,(71) 99876-1122,comercial@limpezavitoria.com.br,Rua da Paciência, 890 - Rio Vermelho, Salvador - BA
+Congelados do Sul ME,54.741.852/0001-01,(81) 3232-3344,pedidos@congeladosdosul.com.br,Avenida Abdias de Carvalho, 1200 - Madalena, Recife - PE
+Distribuidora de Bebidas Central MEI,82.159.753/0001-12,(92) 99876-4455,atendimento@bebidascentral.com.br,Avenida das Flores, 890 - Flores, Manaus - AM
+Atacadista de Alimentos Estrela EIRELI,39.963.852/0001-23,(27) 3232-5566,vendas@atacadistaestrela.com.br,Avenida Fernando Ferrari, 1200 - Goiabeiras, Vitória - ES
+Hortifruti Popular ME,17.852.147/0001-34,(19) 99876-6677,contato@hortifrutipopular.com.br,Rua Regente Feijó, 890 - Centro, Campinas - SP
+Panificadora Express LTDA,63.951.753/0001-45,(84) 3232-7788,comercial@panificadoraexpress.com.br,Avenida Alexandrino de Alencar, 1200 - Tirol, Natal - RN
+Frios e Laticínios Nacional MEI,29.357.159/0001-56,(91) 99876-8899,pedidos@friosnacional.com.br,Travessa 14 de Março, 890 - Umarizal, Belém - PA
+Casa de Carnes Bom Preço ME,75.258.741/0001-67,(67) 3232-9900,atendimento@carnesbompreco.com.br,Avenida Mato Grosso, 1200 - Centro, Campo Grande - MS
+Cerealista Aurora S/A,21.852.963/0001-78,(65) 99876-1122,vendas@cerealistaaurora.com.br,Avenida Isaac Póvoas, 890 - Centro, Cuiabá - MT
+Empório Real MEI,57.741.852/0001-89,(98) 3232-3344,contato@emporioreal.com.br,Rua do Ribeirão, 1200 - Centro, São Luís - MA
+Doces e Balas Premium ME,34.159.753/0001-90,(86) 99876-4455,comercial@docespremium.com.br,Avenida Frei Serafim, 890 - Centro, Teresina - PI
+Limpeza e Higiene do Norte EIRELI,81.963.852/0001-01,(48) 3232-5566,pedidos@limpezadonorte.com.br,Rua Princesa Izabel, 1200 - Centro, Joinville - SC
+Congelados Premium LTDA,43.852.147/0001-12,(11) 99876-6677,atendimento@congeladospremium.com.br,Avenida do Rio Bonito, 890 - Interlagos, São Paulo - SP
+Distribuidora de Alimentos do Sul ME,12.951.753/0001-23,(21) 3232-7788,vendas@distribuidoradosul.com.br,Rua da Assembleia, 1200 - Centro, Rio de Janeiro - RJ
+Atacadista de Bebidas Bom Preço MEI,69.357.159/0001-34,(31) 99876-8899,contato@bebidasbompreco.com.br,Avenida Bernardo Monteiro, 890 - Funcionários, Belo Horizonte - MG
+Hortifruti Aliança EIRELI,26.258.741/0001-45,(41) 3232-9900,comercial@hortifrutialianca.com.br,Avenida Nossa Senhora da Luz, 1200 - Bacacheri, Curitiba - PR
+Panificadora Estrela S/A,84.852.963/0001-56,(51) 99876-1122,pedidos@panificadoraestrela.com.br,Avenida Eduardo Prado, 890 - Vila Nova, Porto Alegre - RS
+Frios e Laticínios Express ME,38.741.852/0001-67,(61) 3232-3344,atendimento@friosepress.com.br,SCLRN 314, Bloco A, Loja 5 - Asa Norte, Brasília - DF
+Casa de Carnes Central MEI,52.159.753/0001-78,(48) 99876-4455,vendas@carnescentral.com.br,Avenida Rio Branco, 1200 - Centro, Florianópolis - SC
+Cerealista Nacional LTDA,18.963.852/0001-89,(85) 3232-5566,contato@cerealistanacional.com.br,Avenida 13 de Maio, 890 - Fátima, Fortaleza - CE
+Empório Vitória ME,74.852.147/0001-90,(62) 99876-6677,comercial@emporiovitoria.com.br,Avenida Tocantins, 1200 - Setor Central, Goiânia - GO
+Doces e Balas Express MEI,36.951.753/0001-01,(71) 3232-7788,pedidos@docesexpress.com.br,Avenida Cardeal da Silva, 890 - Federação, Salvador - BA
+Limpeza e Higiene Boa Vista EIRELI,62.357.159/0001-12,(81) 99876-8899,atendimento@limpezaboavista.com.br,Rua da Aurora, 1200 - Boa Vista, Recife - PE
+Congelados Aurora S/A,24.258.741/0001-23,(92) 3232-9900,vendas@congeladosaurora.com.br,Avenida Tarumã, 890 - Tarumã, Manaus - AM
+Distribuidora de Bebidas do Norte ME,88.852.963/0001-34,(27) 99876-1122,contato@bebidasdonorte.com.br,Rua Barão de Monjardim, 1200 - Centro, Vitória - ES
+Atacadista de Alimentos Popular MEI,31.741.852/0001-45,(19) 3232-3344,comercial@atacadistapopular.com.br,Avenida Andrade Neves, 890 - Botafogo, Campinas - SP
+Hortifruti Central LTDA,47.159.753/0001-56,(84) 99876-4455,pedidos@hortifruticentral.com.br,Avenida Amintas Barros, 1200 - Lagoa Nova, Natal - RN
+Panificadora do Norte ME,15.963.852/0001-67,(91) 3232-5566,atendimento@panificadoradonorte.com.br,Avenida Tavares Bastos, 890 - Marquês, Belém - PA
+Frios e Laticínios Estrela EIRELI,73.852.147/0001-78,(67) 99876-6677,vendas@friosestrela.com.br,Avenida Euler de Azevedo, 1200 - Jardim Paulista, Campo Grande - MS
+Casa de Carnes Vitória MEI,49.951.753/0001-89,(65) 3232-7788,contato@carnesvitoria.com.br,Rua Barão de Melgaço, 890 - Centro, Cuiabá - MT
+Cerealista Premium S/A,22.357.159/0001-90,(98) 99876-8899,comercial@cerealistapremium.com.br,Avenida Jerônimo de Albuquerque, 1200 - Calhau, São Luís - MA
+Empório Boa Vista LTDA,66.258.741/0001-01,(86) 3232-9900,pedidos@emporioboavista.com.br,Avenida Frei Serafim, 890 - Centro, Teresina - PI
+Doces e Balas Aliança ME,33.852.963/0001-12,(48) 99876-1122,atendimento@docesalianca.com.br,Rua XV de Novembro, 1200 - Centro, Joinville - SC
+Limpeza e Higiene Nacional MEI,77.741.852/0001-23,(11) 3232-3344,vendas@limpezanacional.com.br,Avenida Paulista, 890 - Bela Vista, São Paulo - SP
+Congelados União EIRELI,41.159.753/0001-34,(21) 99876-4455,contato@congeladosuniao.com.br,Avenida Nossa Senhora de Copacabana, 1200 - Copacabana, Rio de Janeiro - RJ
+Distribuidora de Alimentos Central ME,58.963.852/0001-45,(31) 3232-5566,comercial@distribuidoracentral.com.br,Rua Rio de Janeiro, 890 - Centro, Belo Horizonte - MG
+Atacadista de Bebidas Aliança S/A,19.852.147/0001-56,(41) 99876-6677,pedidos@bebidasalianca.com.br,Avenida Sete de Setembro, 1200 - Centro, Curitiba - PR
+Hortifruti Bom Preço MEI,85.951.753/0001-67,(51) 3232-7788,atendimento@hortifrutibompreco.com.br,Avenida Getúlio Vargas, 890 - Menino Deus, Porto Alegre - RS
+Panificadora Vitória ME,27.357.159/0001-78,(61) 99876-8899,vendas@panificadoravitoria.com.br,SQN 302, Bloco B, Loja 1 - Asa Norte, Brasília - DF
+Frios e Laticínios do Norte EIRELI,64.258.741/0001-89,(48) 3232-9900,contato@friosdonorte.com.br,Avenida Mauro Ramos, 1200 - Centro, Florianópolis - SC
+Casa de Carnes Real LTDA,38.852.963/0001-90,(85) 99876-1122,comercial@carnesreal.com.br,Avenida Barão de Studart, 890 - Aldeota, Fortaleza - CE
+Cerealista Boa Vista MEI,53.741.852/0001-01,(62) 3232-3344,pedidos@cerealistaboavista.com.br,Avenida 85, 1200 - Setor Marista, Goiânia - GO
+Empório Progresso ME,16.159.753/0001-12,(71) 99876-4455,atendimento@emporioprogresso.com.br,Avenida Sete Portas, 890 - Sete Portas, Salvador - BA
+Doces e Balas do Norte EIRELI,71.963.852/0001-23,(81) 3232-5566,vendas@docesdonorte.com.br,Rua Imperial, 1200 - São José, Recife - PE
+Limpeza e Higiene Central S/A,29.852.147/0001-34,(92) 99876-6677,contato@limpezacentral.com.br,Avenida Brasil, 890 - Compensa, Manaus - AM
+Congelados Bom Preço MEI,83.951.753/0001-45,(27) 3232-7788,comercial@congeladosbompreco.com.br,Rua Sete de Setembro, 1200 - Centro, Vitória - ES
+Distribuidora de Bebidas Popular ME,44.357.159/0001-56,(19) 99876-8899,pedidos@bebidaspopular.com.br,Avenida Marechal Rondon, 890 - Centro, Campinas - SP
+Atacadista de Alimentos Premium LTDA,67.258.741/0001-67,(84) 3232-9900,atendimento@atacadistapremium.com.br,Avenida Bernardo Vieira, 1200 - Tirol, Natal - RN
+Hortifruti do Sul MEI,21.852.963/0001-78,(91) 99876-1122,vendas@hortifrutidosul.com.br,Avenida Almirante Barroso, 890 - Marco, Belém - PA
+Panificadora Bom Preço EIRELI,59.741.852/0001-89,(67) 3232-3344,contato@panificadorabompreco.com.br,Avenida Afonso Pena, 1200 - Centro, Campo Grande - MS
+Frios e Laticínios Central ME,35.159.753/0001-90,(65) 99876-4455,comercial@frioscentral.com.br,Avenida Historiador Rubens de Mendonça, 890 - Bosque, Cuiabá - MT
+Casa de Carnes Boa Vista MEI,79.963.852/0001-01,(98) 3232-5566,pedidos@carnesboavista.com.br,Avenida dos Holandeses, 1200 - Ponta d'Areia, São Luís - MA
+Cerealista do Norte LTDA,13.852.147/0001-12,(86) 99876-6677,atendimento@cerealistadonorte.com.br,Avenida Marechal Castelo Branco, 890 - Cabral, Teresina - PI
+Empório Central ME,81.951.753/0001-23,(48) 3232-7788,vendas@emporiocentral.com.br,Rua Jerônimo Coelho, 1200 - Centro, Florianópolis - SC
+Doces e Balas Progresso S/A,42.357.159/0001-34,(11) 99876-8899,contato@docesprogresso.com.br,Avenida Cidade Jardim, 890 - Itaim Bibi, São Paulo - SP
+Limpeza e Higiene Express MEI,68.258.741/0001-45,(21) 3232-9900,comercial@limpezaexpress.com.br,Rua Barão da Torre, 1200 - Ipanema, Rio de Janeiro - RJ
+Congelados Aliança ME,26.852.963/0001-56,(31) 99876-1122,pedidos@congeladosalianca.com.br,Avenida Nossa Senhora do Carmo, 890 - Sion, Belo Horizonte - MG
+Distribuidora de Alimentos Aurora EIRELI,55.741.852/0001-67,(41) 3232-3344,atendimento@distribuidoraaurora.com.br,Avenida Manoel Ribas, 1200 - Mercês, Curitiba - PR
+Atacadista de Bebidas Nacional ME,19.159.753/0001-78,(51) 99876-4455,vendas@bebidasnacional.com.br,Avenida Protásio Alves, 890 - Rio Branco, Porto Alegre - RS
+Hortifruti Premium MEI,73.963.852/0001-89,(61) 3232-5566,contato@hortifrutipremium.com.br,SCS Quadra 6, Bloco A, Loja 4 - Asa Sul, Brasília - DF
+Panificadora Central LTDA,37.852.147/0001-90,(48) 99876-6677,comercial@panificadoracentral.com.br,Avenida Beira Mar Norte, 1200 - Agronômica, Florianópolis - SC
+Frios e Laticínios Vitória S/A,84.951.753/0001-01,(85) 3232-7788,pedidos@friosvitoria.com.br,Avenida Desembargador Moreira, 890 - Aldeota, Fortaleza - CE
+Casa de Carnes Estrela ME,22.357.159/0001-12,(62) 99876-8899,atendimento@carnesestrela.com.br,Avenida T-9, 1200 - Setor Bueno, Goiânia - GO
+Cerealista Real MEI,61.258.741/0001-23,(71) 3232-9900,vendas@cerealistareal.com.br,Rua Carlos Gomes, 890 - Centro, Salvador - BA
+Empório do Norte EIRELI,45.852.963/0001-34,(81) 99876-1122,contato@emporiodonorte.com.br,Avenida Parnamirim, 1200 - Parnamirim, Recife - PE
+Doces e Balas Estrela ME,17.741.852/0001-45,(92) 3232-3344,comercial@docesestrela.com.br,Avenida Constantino Nery, 890 - São Geraldo, Manaus - AM
+Limpeza e Higiene Progresso LTDA,78.159.753/0001-56,(27) 99876-4455,pedidos@limpezaprogresso.com.br,Avenida Nossa Senhora da Penha, 1200 - Praia do Canto, Vitória - ES
+Congelados Real MEI,34.963.852/0001-67,(19) 3232-5566,atendimento@congeladosreal.com.br,Avenida John Boyd Dunlop, 890 - Jardim Aurélia, Campinas - SP
+Distribuidora de Bebidas Estrela ME,52.852.147/0001-78,(84) 99876-6677,vendas@bebidasestrela.com.br,Avenida Salgado Filho, 1200 - Tirol, Natal - RN
+Atacadista de Alimentos do Norte EIRELI,25.951.753/0001-89,(91) 3232-7788,contato@atacadistadonorte.com.br,Avenida Pedro Miranda, 890 - Pedreira, Belém - PA
+Hortifruti Vitória S/A,86.357.159/0001-90,(67) 99876-8899,comercial@hortifrutivitoria.com.br,Rua 14 de Julho, 1200 - Centro, Campo Grande - MS
+Panificadora Real MEI,43.258.741/0001-01,(65) 3232-9900,pedidos@panificadorareal.com.br,Avenida CPA, 890 - Morada da Serra, Cuiabá - MT
+Frios e Laticínios Bom Preço ME,69.852.963/0001-12,(98) 99876-1122,atendimento@friosbompreco.com.br,Avenida Jerônimo de Albuquerque, 1200 - Cohama, São Luís - MA
+Casa de Carnes Central EIRELI,32.741.852/0001-23,(86) 3232-3344,vendas@carnescentral.com.br,Avenida Nossa Senhora de Fátima, 890 - Fátima, Teresina - PI
+Cerealista Express LTDA,74.159.753/0001-34,(48) 99876-4455,contato@cerealistaexpress.com.br,Rua São Bento, 1200 - Centro, Joinville - SC
+Empório Aliança MEI,21.963.852/0001-45,(11) 3232-5566,comercial@emporioalianca.com.br,Avenida Morumbi, 890 - Morumbi, São Paulo - SP
+Doces e Balas do Sul ME,57.852.147/0001-56,(21) 99876-6677,pedidos@docesdosul.com.br,Rua da Carioca, 1200 - Centro, Rio de Janeiro - RJ
+Limpeza e Higiene Bom Preço EIRELI,38.951.753/0001-67,(31) 3232-7788,atendimento@limpezabompreco.com.br,Avenida do Contorno, 890 - Savassi, Belo Horizonte - MG
+Congelados Vitória S/A,83.357.159/0001-78,(41) 99876-8899,vendas@congeladosvitoria.com.br,Rua Itupava, 1200 - Alto da XV, Curitiba - PR
+Distribuidora de Alimentos Popular MEI,16.258.741/0001-89,(51) 3232-9900,contato@distribuidorapopular.com.br,Avenida João Pessoa, 890 - Cidade Baixa, Porto Alegre - RS
+Atacadista de Bebidas Premium ME,64.852.963/0001-90,(61) 99876-1122,comercial@bebidaspremium.com.br,SQN 208, Bloco D, Loja 3 - Asa Norte, Brasília - DF
+Hortifruti Aurora LTDA,47.741.852/0001-01,(48) 3232-3344,pedidos@hortifrutiaurora.com.br,Avenida Rio Branco, 1200 - Centro, Florianópolis - SC
+Panificadora Premium MEI,29.159.753/0001-12,(85) 99876-4455,atendimento@panificadorapremium.com.br,Avenida Washington Soares, 890 - Edson Queiroz, Fortaleza - CE
+Frios e Laticínios Real EIRELI,75.963.852/0001-23,(62) 3232-5566,vendas@friosreal.com.br,Avenida T-63, 1200 - Setor Bueno, Goiânia - GO
+Casa de Carnes Nacional ME,36.852.147/0001-34,(71) 99876-6677,contato@carnesnacional.com.br,Avenida Vasco da Gama, 890 - Vasco da Gama, Salvador - BA
+Cerealista Estrela MEI,81.951.753/0001-45,(81) 3232-7788,comercial@cerealistaestrela.com.br,Rua do Hospício, 1200 - Boa Vista, Recife - PE
+Empório Premium S/A,23.357.159/0001-56,(92) 99876-8899,pedidos@emporiopremium.com.br,Avenida Djalma Batista, 890 - Chapada, Manaus - AM
+Doces e Balas Central EIRELI,68.258.741/0001-67,(27) 3232-9900,atendimento@docescentral.com.br,Avenida Jerônimo Monteiro, 1200 - Centro, Vitória - ES
+Limpeza e Higiene Vitória ME,15.852.963/0001-78,(19) 99876-1122,vendas@limpezavitoria.com.br,Avenida Andrade Neves, 890 - Botafogo, Campinas - SP
+Congelados Popular LTDA,72.741.852/0001-89,(84) 3232-3344,contato@congeladospopular.com.br,Avenida Romualdo Galvão, 1200 - Lagoa Nova, Natal - RN
+Distribuidora de Bebidas Boa Vista MEI,44.159.753/0001-90,(91) 99876-4455,comercial@bebidasboavista.com.br,Avenida Duque de Caxias, 890 - Marco, Belém - PA
+Atacadista de Alimentos Central ME,58.963.852/0001-01,(67) 3232-5566,pedidos@atacadistacentral.com.br,Avenida Mato Grosso, 1200 - Centro, Campo Grande - MS
+Hortifruti do Norte EIRELI,31.852.147/0001-12,(65) 99876-6677,atendimento@hortifrutidonorte.com.br,Avenida Isaac Póvoas, 890 - Centro, Cuiabá - MT
+Panificadora Aliança S/A,87.951.753/0001-23,(98) 3232-7788,vendas@panificadoraalianca.com.br,Avenida Colares Moreira, 1200 - Renascença, São Luís - MA
+Frios e Laticínios Premium ME,25.357.159/0001-34,(86) 99876-8899,contato@friosepremium.com.br,Avenida Dom Severino, 890 - Fátima, Teresina - PI
+Casa de Carnes do Sul MEI,63.258.741/0001-45,(48) 3232-9900,comercial@carnesdosul.com.br,Rua Blumenau, 1200 - Centro, Joinville - SC
+Cerealista Vitória LTDA,49.852.963/0001-56,(11) 99876-1122,pedidos@cerealistavitoria.com.br,Avenida Paulista, 890 - Bela Vista, São Paulo - SP
+Empório Nacional MEI,18.741.852/0001-67,(21) 3232-3344,atendimento@emporionacional.com.br,Avenida Rio Branco, 1200 - Centro, Rio de Janeiro - RJ
+Doces e Balas Boa Vista EIRELI,76.159.753/0001-78,(31) 99876-4455,vendas@docesboavista.com.br,Avenida Amazonas, 890 - Centro, Belo Horizonte - MG
+Limpeza e Higiene do Sul ME,33.963.852/0001-89,(41) 3232-5566,contato@limpezadosul.com.br,Rua XV de Novembro, 1200 - Centro, Curitiba - PR
+Congelados Estrela MEI,82.852.147/0001-90,(51) 99876-6677,comercial@congeladosestrela.com.br,Avenida Ipiranga, 890 - Azenha, Porto Alegre - RS
+Distribuidora de Alimentos Vitória S/A,27.951.753/0001-01,(61) 3232-7788,pedidos@distribuidoravitoria.com.br,SCS Quadra 8, Bloco B, Loja 5 - Asa Sul, Brasília - DF
+Atacadista de Bebidas Aurora ME,54.357.159/0001-12,(48) 99876-8899,atendimento@bebidasaurora.com.br,Avenida Hercílio Luz, 1200 - Centro, Florianópolis - SC
+Hortifruti Central MEI,39.258.741/0001-23,(85) 3232-9900,vendas@hortifruticentral.com.br,Avenida Bezerra de Menezes, 890 - São Gerardo, Fortaleza - CE
+Panificadora Nacional EIRELI,67.852.963/0001-34,(62) 99876-1122,contato@panificadoranacional.com.br,Avenida Anhanguera, 1200 - Setor Central, Goiânia - GO
+Frios e Laticínios do Sul LTDA,14.741.852/0001-45,(71) 3232-3344,comercial@friosdosul.com.br,Avenida Tancredo Neves, 890 - Caminho das Árvores, Salvador - BA
+Casa de Carnes Bom Preço ME,79.159.753/0001-56,(81) 99876-4455,pedidos@carnesbompreco.com.br,Avenida Boa Viagem, 1200 - Boa Viagem, Recife - PE
+Cerealista Central MEI,46.963.852/0001-67,(92) 3232-5566,atendimento@cerealistacentral.com.br,Avenida Torquato Tapajós, 890 - Flores, Manaus - AM
+Empório Bom Preço EIRELI,22.852.147/0001-78,(27) 99876-6677,vendas@emporiobompreco.com.br,Rua Sete de Setembro, 1200 - Centro, Vitória - ES
+Doces e Balas Nacional ME,85.951.753/0001-89,(19) 3232-7788,contato@docesnacional.com.br,Avenida Norte-Sul, 890 - Centro, Campinas - SP
+Limpeza e Higiene Popular MEI,51.357.159/0001-90,(84) 99876-8899,comercial@limpezapopular.com.br,Avenida Nevaldo Rocha, 1200 - Tirol, Natal - RN
+Congelados do Norte S/A,37.258.741/0001-01,(91) 3232-9900,pedidos@congeladosdonorte.com.br,Avenida Governador José Malcher, 890 - Nazaré, Belém - PA
+Distribuidora de Alimentos Express ME,73.852.963/0001-12,(67) 99876-1122,atendimento@distribuidoraexpress.com.br,Avenida Costa e Silva, 1200 - Jardim dos Estados, Campo Grande - MS
+Atacadista de Bebidas do Sul LTDA,19.741.852/0001-23,(65) 3232-3344,vendas@bebidasdosul.com.br,Avenida Fernando Corrêa, 890 - Coxipó, Cuiabá - MT
+Hortifruti Aliança MEI,65.159.753/0001-34,(98) 99876-4455,contato@hortifrutialianca.com.br,Avenida dos Africanos, 1200 - São Francisco, São Luís - MA
+Panificadora Progresso EIRELI,41.963.852/0001-45,(86) 3232-5566,comercial@panificadoraprogresso.com.br,Avenida João XXIII, 890 - Noivos, Teresina - PI
+Frios e Laticínios Nacional ME,28.852.147/0001-56,(48) 99876-6677,pedidos@friosnacional.com.br,Rua Rio Branco, 1200 - Centro, Joinville - SC
+Casa de Carnes Aliança MEI,84.951.753/0001-67,(11) 3232-7788,atendimento@carnesalianca.com.br,Avenida Faria Lima, 890 - Pinheiros, São Paulo - SP
+Cerealista Popular S/A,32.357.159/0001-78,(21) 99876-8899,vendas@cerealistapopular.com.br,Avenida Atlântica, 1200 - Copacabana, Rio de Janeiro - RJ
+Empório Estrela LTDA,57.258.741/0001-89,(31) 3232-9900,contato@emporioestrela.com.br,Rua dos Aimorés, 890 - Funcionários, Belo Horizonte - MG
+Doces e Balas Premium ME,16.852.963/0001-90,(41) 99876-1122,comercial@docespremium.com.br,Avenida República Argentina, 1200 - Água Verde, Curitiba - PR
+Limpeza e Higiene Estrela MEI,74.741.852/0001-01,(51) 3232-3344,pedidos@limpezaestrela.com.br,Avenida Bento Gonçalves, 890 - Partenon, Porto Alegre - RS
+Congelados Central EIRELI,38.159.753/0001-12,(61) 99876-4455,atendimento@congeladoscentral.com.br,CLN 204, Bloco C, Loja 2 - Asa Norte, Brasília - DF
+Distribuidora de Alimentos Bom Preço ME,62.963.852/0001-23,(48) 3232-5566,vendas@distribuidorabompreco.com.br,Avenida Mauro Ramos, 1200 - Centro, Florianópolis - SC
+Atacadista de Bebidas São José MEI,24.852.147/0001-34,(85) 99876-6677,contato@bebidassaojose.com.br,Avenida Santos Dumont, 890 - Aldeota, Fortaleza - CE
+Hortifruti Express S/A,88.951.753/0001-45,(62) 3232-7788,comercial@hortifrutiexpress.com.br,Avenida 136, 1200 - Setor Sul, Goiânia - GO
+Panificadora Boa Vista LTDA,35.357.159/0001-56,(71) 99876-8899,pedidos@panificadoraboavista.com.br,Rua Chile, 890 - Comércio, Salvador - BA
+Frios e Laticínios São José ME,71.258.741/0001-67,(81) 3232-9900,atendimento@friossaojose.com.br,Avenida Caxangá, 1200 - Cordeiro, Recife - PE
+Casa de Carnes Progresso MEI,47.852.963/0001-78,(92) 99876-1122,vendas@carnesprogresso.com.br,Avenida Autaz Mirim, 890 - Jorge Teixeira, Manaus - AM
+Cerealista do Sul EIRELI,13.741.852/0001-89,(27) 3232-3344,contato@cerealistadosul.com.br,Rua Jerônimo Monteiro, 1200 - Centro, Vitória - ES
+Empório Vitória ME,83.159.753/0001-90,(19) 99876-4455,comercial@emporiovitoria.com.br,Avenida Andrade Neves, 890 - Botafogo, Campinas - SP
+Doces e Balas Bom Preço S/A,29.963.852/0001-01,(84) 3232-5566,pedidos@docesbompreco.com.br,Avenida Hermes da Fonseca, 1200 - Tirol, Natal - RN
+Limpeza e Higiene Real MEI,66.852.147/0001-12,(91) 99876-6677,atendimento@limpezareal.com.br,Avenida Almirante Barroso, 890 - Marco, Belém - PA
+Congelados Aurora ME,42.951.753/0001-23,(67) 3232-7788,vendas@congeladosaurora.com.br,Avenida Gury Marques, 1200 - Universitário, Campo Grande - MS
+Distribuidora de Bebidas Central LTDA,78.357.159/0001-34,(65) 99876-8899,contato@bebidascentral.com.br,Avenida Miguel Sutil, 890 - Jardim Leblon, Cuiabá - MT
+Atacadista de Alimentos União MEI,15.258.741/0001-45,(98) 3232-9900,comercial@atacadistauniao.com.br,Avenida dos Franceses, 1200 - Renascença, São Luís - MA
+Hortifruti Boa Vista EIRELI,53.852.963/0001-56,(86) 99876-1122,pedidos@hortifrutiboavista.com.br,Avenida Higino Cunha, 890 - Ilhotas, Teresina - PI
+Panificadora Vitória ME,37.741.852/0001-67,(48) 3232-3344,atendimento@panificadoravitoria.com.br,Rua Marechal Deodoro, 1200 - Centro, Joinville - SC
+Frios e Laticínios Aliança S/A,81.159.753/0001-78,(11) 99876-4455,vendas@friosalianca.com.br,Avenida Ibirapuera, 890 - Moema, São Paulo - SP
+Casa de Carnes Premium MEI,23.963.852/0001-89,(21) 3232-5566,contato@carnespremium.com.br,Rua Visconde de Pirajá, 1200 - Ipanema, Rio de Janeiro - RJ
+Cerealista Bom Preço ME,64.852.147/0001-90,(31) 99876-6677,comercial@cerealistabompreco.com.br,Avenida do Contorno, 890 - Savassi, Belo Horizonte - MG
+Empório Progresso EIRELI,19.951.753/0001-01,(41) 3232-7788,pedidos@emporioprogresso.com.br,Avenida Sete de Setembro, 1200 - Batel, Curitiba - PR
+Doces e Balas Vitória LTDA,75.357.159/0001-12,(51) 99876-8899,atendimento@docesvitoria.com.br,Avenida Independência, 890 - Independência, Porto Alegre - RS
+Limpeza e Higiene Nacional MEI,48.258.741/0001-23,(61) 3232-9900,vendas@limpezanacional.com.br,SQN 210, Bloco E, Loja 1 - Asa Norte, Brasília - DF
+Congelados Aliança ME,26.852.963/0001-34,(48) 99876-1122,contato@congeladosalianca.com.br,Avenida Beira Mar Norte, 1200 - Agronômica, Florianópolis - SC
+Distribuidora de Alimentos Real S/A,72.741.852/0001-45,(85) 3232-3344,comercial@distribuidorareal.com.br,Avenida 13 de Maio, 890 - Benfica, Fortaleza - CE
+Atacadista de Bebidas Express EIRELI,34.159.753/0001-56,(62) 99876-4455,pedidos@bebidasexpress.com.br,Avenida T-9, 1200 - Setor Bueno, Goiânia - GO
+Hortifruti Premium ME,86.963.852/0001-67,(71) 3232-5566,atendimento@hortifrutipremium.com.br,Avenida ACM, 890 - Itaigara, Salvador - BA
+Panificadora do Sul MEI,18.852.147/0001-78,(81) 99876-6677,vendas@panificadora dosul.com.br,Rua do Imperador, 1200 - Santo Antônio, Recife - PE
+Frios e Laticínios Express LTDA,55.951.753/0001-89,(92) 3232-7788,contato@friosepress.com.br,Avenida Sete de Setembro, 890 - Centro, Manaus - AM
+Casa de Carnes Boa Vista ME,31.357.159/0001-90,(27) 99876-8899,comercial@carnesboavista.com.br,Avenida Vitória, 1200 - Centro, Vitória - ES
+Cerealista Premium MEI,77.258.741/0001-01,(19) 3232-9900,pedidos@cerealistapremium.com.br,Avenida Barão de Itapura, 890 - Guanabara, Campinas - SP
+Empório Central EIRELI,43.852.963/0001-12,(84) 99876-1122,atendimento@emporiocentral.com.br,Avenida Afonso Pena, 1200 - Tirol, Natal - RN
+Doces e Balas Estrela S/A,69.741.852/0001-23,(91) 3232-3344,vendas@docesestrela.com.br,Avenida Pedro Álvares Cabral, 890 - Umarizal, Belém - PA
+Limpeza e Higiene Aurora MEI,21.159.753/0001-34,(67) 99876-4455,contato@limpezaaurora.com.br,Avenida Ceará, 1200 - Jardim dos Estados, Campo Grande - MS
+Congelados Estrela ME,84.963.852/0001-45,(65) 3232-5566,comercial@congeladosestrela.com.br,Avenida Beira Rio, 890 - Porto, Cuiabá - MT
+Distribuidora de Alimentos Aurora LTDA,39.852.147/0001-56,(98) 99876-6677,pedidos@distribuidoraaurora.com.br,Avenida Getúlio Vargas, 1200 - Monte Castelo, São Luís - MA
+Atacadista de Bebidas Real EIRELI,63.951.753/0001-67,(86) 3232-7788,atendimento@bebidasreal.com.br,Avenida Miguel Rosa, 890 - Centro, Teresina - PI
+Hortifruti Bom Preço MEI,28.357.159/0001-78,(48) 99876-8899,vendas@hortifrutibompreco.com.br,Rua XV de Novembro, 1200 - Centro, Joinville - SC
+Panificadora Estrela ME,74.258.741/0001-89,(11) 3232-9900,contato@panificadoraestrela.com.br,Avenida Rebouças, 890 - Pinheiros, São Paulo - SP
+Frios e Laticínios Central EIRELI,47.852.963/0001-90,(21) 99876-1122,comercial@frioscentral.com.br,Rua Barata Ribeiro, 1200 - Copacabana, Rio de Janeiro - RJ
+Casa de Carnes Vitória S/A,15.741.852/0001-01,(31) 3232-3344,pedidos@carnesvitoria.com.br,Avenida Afonso Pena, 890 - Centro, Belo Horizonte - MG
+Cerealista Aurora MEI,82.159.753/0001-12,(41) 99876-4455,atendimento@cerealistaaurora.com.br,Rua Comendador Araújo, 1200 - Batel, Curitiba - PR
+Empório do Sul ME,51.963.852/0001-23,(51) 3232-5566,vendas@emporiodosul.com.br,Avenida Protásio Alves, 890 - Petrópolis, Porto Alegre - RS
+Doces e Balas Progresso EIRELI,36.852.147/0001-34,(61) 99876-6677,contato@docesprogresso.com.br,SCS Quadra 1, Bloco A, Loja 3 - Asa Sul, Brasília - DF
+Limpeza e Higiene Boa Vista LTDA,68.951.753/0001-45,(48) 3232-7788,comercial@limpezaboavista.com.br,Avenida Beira Mar Norte, 1200 - Centro, Florianópolis - SC
+Congelados Boa Vista MEI,24.357.159/0001-56,(85) 99876-8899,pedidos@congeladosboavista.com.br,Avenida Bezerra de Menezes, 890 - São Gerardo, Fortaleza - CE
+Distribuidora de Bebidas Popular ME,79.258.741/0001-67,(62) 3232-9900,atendimento@bebidaspopular.com.br,Avenida Anhanguera, 1200 - Setor Central, Goiânia - GO
+Atacadista de Alimentos do Sul EIRELI,42.852.963/0001-78,(71) 99876-1122,vendas@atacadistadosul.com.br,Avenida Sete de Setembro, 890 - Vitória, Salvador - BA
+Hortifruti Nacional S/A,17.741.852/0001-89,(81) 3232-3344,contato@hortifrutinacional.com.br,Avenida Conselheiro Aguiar, 1200 - Boa Viagem, Recife - PE
+Panificadora Aliança MEI,85.159.753/0001-90,(92) 99876-4455,comercial@panificadoraalianca.com.br,Avenida Djalma Batista, 890 - Chapada, Manaus - AM
+Frios e Laticínios Premium ME,33.963.852/0001-01,(27) 3232-5566,pedidos@friosepremium.com.br,Avenida Nossa Senhora da Penha, 1200 - Praia do Canto, Vitória - ES
+Casa de Carnes do Norte LTDA,57.852.147/0001-12,(19) 99876-6677,atendimento@carnesdonorte.com.br,Avenida John Boyd Dunlop, 890 - Jardim Aurélia, Campinas - SP
+Cerealista Boa Vista MEI,26.951.753/0001-23,(84) 3232-7788,vendas@cerealistaboavista.com.br,Avenida Salgado Filho, 1200 - Tirol, Natal - RN
+Empório Premium EIRELI,71.357.159/0001-34,(91) 99876-8899,contato@emporiopremium.com.br,Avenida Almirante Barroso, 890 - Marco, Belém - PA
+Doces e Balas Central ME,44.258.741/0001-45,(67) 3232-9900,comercial@docescentral.com.br,Avenida Afonso Pena, 1200 - Amambaí, Campo Grande - MS
+Limpeza e Higiene Aliança S/A,83.852.963/0001-56,(65) 99876-1122,pedidos@limpezaalianca.com.br,Avenida Isaac Póvoas, 890 - Centro, Cuiabá - MT
+Congelados Premium MEI,19.741.852/0001-67,(98) 3232-3344,atendimento@congeladospremium.com.br,Avenida Colares Moreira, 1200 - Jardim Renascença, São Luís - MA
+Distribuidora de Alimentos Boa Vista ME,62.159.753/0001-78,(86) 99876-4455,vendas@distribuidoraboavista.com.br,Avenida Frei Serafim, 890 - Centro, Teresina - PI
+Atacadista de Bebidas Bom Preço EIRELI,38.963.852/0001-89,(48) 3232-5566,contato@bebidasbompreco.com.br,Rua Blumenau, 1200 - Centro, Joinville - SC
+Hortifruti Vitória MEI,74.852.147/0001-90,(11) 99876-6677,comercial@hortifrutivitoria.com.br,Avenida Paulista, 890 - Bela Vista, São Paulo - SP
+Panificadora Real ME,29.951.753/0001-01,(21) 3232-7788,pedidos@panificadorareal.com.br,Avenida Nossa Senhora de Copacabana, 1200 - Copacabana, Rio de Janeiro - RJ
+Frios e Laticínios Popular LTDA,66.357.159/0001-12,(31) 99876-8899,atendimento@friosepopular.com.br,Avenida Amazonas, 890 - Centro, Belo Horizonte - MG
+Casa de Carnes Central MEI,41.258.741/0001-23,(41) 3232-9900,vendas@carnescentral.com.br,Avenida Sete de Setembro, 1200 - Centro, Curitiba - PR
+Cerealista Aliança ME,87.852.963/0001-34,(51) 99876-1122,contato@cerealistaalianca.com.br,Avenida Ipiranga, 890 - Azenha, Porto Alegre - RS
+Empório Boa Vista EIRELI,23.741.852/0001-45,(61) 3232-3344,comercial@emporioboavista.com.br,CLN 208, Bloco B, Loja 5 - Asa Norte, Brasília - DF
+Doces e Balas do Norte S/A,54.159.753/0001-56,(48) 99876-4455,pedidos@docesdonorte.com.br,Avenida Rio Branco, 1200 - Centro, Florianópolis - SC
+Limpeza e Higiene Central MEI,32.963.852/0001-67,(85) 3232-5566,atendimento@limpezacentral.com.br,Avenida Washington Soares, 890 - Edson Queiroz, Fortaleza - CE
+Congelados Bom Preço ME,76.852.147/0001-78,(62) 99876-6677,vendas@congeladosbompreco.com.br,Avenida 85, 1200 - Setor Marista, Goiânia - GO
+Distribuidora de Bebidas Aliança EIRELI,18.951.753/0001-89,(71) 3232-7788,contato@bebidasalianca.com.br,Avenida Oceânica, 890 - Barra, Salvador - BA
+Atacadista de Alimentos Express MEI,63.357.159/0001-90,(81) 99876-8899,comercial@atacadistaexpress.com.br,Avenida Boa Viagem, 1200 - Boa Viagem, Recife - PE
+Hortifruti do Sul LTDA,45.258.741/0001-01,(92) 3232-9900,pedidos@hortifrutidosul.com.br,Avenida Constantino Nery, 890 - São Geraldo, Manaus - AM
+Panificadora Central ME,81.852.963/0001-12,(27) 99876-1122,atendimento@panificadoracentral.com.br,Rua Jerônimo Monteiro, 1200 - Centro, Vitória - ES
+Frios e Laticínios Bom Preço EIRELI,27.741.852/0001-23,(19) 3232-3344,vendas@friosbompreco.com.br,Avenida Andrade Neves, 890 - Botafogo, Campinas - SP
+Casa de Carnes Estrela MEI,69.159.753/0001-34,(84) 99876-4455,contato@carnesestrela.com.br,Avenida Bernardo Vieira, 1200 - Tirol, Natal - RN
+Cerealista Nacional ME,36.963.852/0001-45,(91) 3232-5566,comercial@cerealistanacional.com.br,Avenida Governador José Malcher, 890 - Nazaré, Belém - PA
+Empório Vitória S/A,52.852.147/0001-56,(67) 99876-6677,pedidos@emporiovitoria.com.br,Avenida Mato Grosso, 1200 - Centro, Campo Grande - MS
+Doces e Balas Boa Vista MEI,14.951.753/0001-67,(65) 3232-7788,atendimento@docesboavista.com.br,Avenida Historiador Rubens de Mendonça, 890 - Bosque, Cuiabá - MT
+Limpeza e Higiene Premium ME,78.357.159/0001-78,(98) 99876-8899,vendas@limpezapremium.com.br,Avenida dos Holandeses, 1200 - Calhau, São Luís - MA
+Congelados do Sul EIRELI,43.258.741/0001-89,(86) 3232-9900,contato@congeladosdosul.com.br,Avenida Marechal Castelo Branco, 890 - Cabral, Teresina - PI
+Distribuidora de Alimentos Premium LTDA,21.852.963/0001-90,(48) 99876-1122,comercial@distribuidorapremium.com.br,Rua Rio Branco, 1200 - Centro, Joinville - SC
+Atacadista de Bebidas Nacional MEI,67.741.852/0001-01,(11) 3232-3344,pedidos@bebidasnacional.com.br,Avenida Ibirapuera, 890 - Moema, São Paulo - SP
+Hortifruti Aurora ME,35.159.753/0001-12,(21) 99876-4455,atendimento@hortifrutiaurora.com.br,Rua Visconde de Pirajá, 1200 - Ipanema, Rio de Janeiro - RJ
+Panificadora Express EIRELI,84.963.852/0001-23,(31) 3232-5566,vendas@panificadoraexpress.com.br,Avenida do Contorno, 890 - Savassi, Belo Horizonte - MG
+Frios e Laticínios Vitória S/A,29.852.147/0001-34,(41) 99876-6677,contato@friosvitoria.com.br,Avenida Sete de Setembro, 1200 - Batel, Curitiba - PR
+Casa de Carnes do Sul MEI,73.951.753/0001-45,(51) 3232-7788,comercial@carnesdosul.com.br,Avenida Independência, 890 - Independência, Porto Alegre - RS
+Cerealista Central ME,46.357.159/0001-56,(61) 99876-8899,pedidos@cerealistacentral.com.br,SQN 212, Bloco C, Loja 2 - Asa Norte, Brasília - DF
+Empório do Norte MEI,12.258.741/0001-67,(48) 3232-9900,atendimento@emporiodonorte.com.br,Avenida Hercílio Luz, 1200 - Centro, Florianópolis - SC
+Doces e Balas Popular EIRELI,58.852.963/0001-78,(85) 99876-1122,vendas@docespupular.com.br,Avenida Santos Dumont, 890 - Aldeota, Fortaleza - CE
+Limpeza e Higiene Boa Vista LTDA,25.741.852/0001-89,(62) 3232-3344,contato@limpezaboavista.com.br,Avenida T-63, 1200 - Setor Bueno, Goiânia - GO
+Congelados Real MEI,81.159.753/0001-90,(71) 99876-4455,comercial@congeladosreal.com.br,Avenida Vasco da Gama, 890 - Vasco da Gama, Salvador - BA
+Distribuidora de Bebidas Central ME,49.963.852/0001-01,(81) 3232-5566,pedidos@bebidascentral.com.br,Avenida Caxangá, 1200 - Cordeiro, Recife - PE
+Atacadista de Alimentos Aliança S/A,37.852.147/0001-12,(92) 99876-6677,atendimento@atacadistaalianca.com.br,Avenida Torquato Tapajós, 890 - Flores, Manaus - AM
+Hortifruti Estrela MEI,64.951.753/0001-23,(27) 3232-7788,vendas@hortifrutiestrela.com.br,Rua Sete de Setembro, 1200 - Centro, Vitória - ES
+Panificadora Bom Preço ME,22.357.159/0001-34,(19) 99876-8899,contato@panificadorabompreco.com.br,Avenida Norte-Sul, 890 - Centro, Campinas - SP
+Frios e Laticínios Estrela EIRELI,76.258.741/0001-45,(84) 3232-9900,comercial@friosestrela.com.br,Avenida Nevaldo Rocha, 1200 - Tirol, Natal - RN
+Casa de Carnes Nacional MEI,31.852.963/0001-56,(91) 99876-1122,pedidos@carnesnacional.com.br,Avenida Pedro Miranda, 890 - Pedreira, Belém - PA
+Cerealista do Norte ME,87.741.852/0001-67,(67) 3232-3344,atendimento@cerealistadonorte.com.br,Avenida Três Barras, 1200 - Nova Bahia, Campo Grande - MS
+Empório Nacional EIRELI,43.159.753/0001-78,(65) 99876-4455,vendas@emporionacional.com.br,Avenida CPA, 890 - Morada da Serra, Cuiabá - MT
+Doces e Balas São José LTDA,18.963

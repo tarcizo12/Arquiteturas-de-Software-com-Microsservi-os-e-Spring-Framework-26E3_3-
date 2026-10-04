@@ -1,5 +1,4 @@
 services:
-
   mysql-dev:
     image: mysql:8.4
     container_name: estoque-mysql-dev
@@ -34,6 +33,23 @@ services:
       timeout: 5s
       retries: 10
 
+  rabbitmq:
+    build: ./rabbitmq
+    container_name: estoque-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
   servico-movimentacao:
     build: ./servico-movimentacao
     container_name: estoque-servico-movimentacao
@@ -65,14 +81,23 @@ services:
         condition: service_healthy
       servico-movimentacao:
         condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
     environment:
       SERVER_PORT: 8080
       SPRING_PROFILES_ACTIVE: dev
+
       DB_URL: jdbc:mysql://mysql-dev:3306/estoque_principal?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
       DB_USERNAME: root
       DB_PASSWORD: root_dev
       JPA_DDL_AUTO: none
+
       SERVICO_COMUNICACAO_URL: http://servico-movimentacao:8081
+
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: admin
+      SPRING_RABBITMQ_PASSWORD: admin
     ports:
       - "8080:8080"
 
