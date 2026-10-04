@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "categorias")
+@Table(name = "categoria")
 @Data
 public class CategoriaEntity {
 
@@ -17,9 +17,10 @@ public class CategoriaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 100)
+    @Column(name = "nome", nullable = false, unique = true, length = 100)
     private String nome;
 
+    @Column(name = "descricao", length = 255)
     private String descricao;
 
     @OneToMany(mappedBy = "categoria")
@@ -40,5 +41,37 @@ public class CategoriaEntity {
                 "  nome='" + nome + "'\n" +
                 "  descricao='" + descricao + "'\n" +
                 '}';
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public List<ProdutoEntity> getProdutos() {
+        return produtos;
+    }
+
+    public void setProdutos(List<ProdutoEntity> produtos) {
+        this.produtos = produtos;
     }
 }

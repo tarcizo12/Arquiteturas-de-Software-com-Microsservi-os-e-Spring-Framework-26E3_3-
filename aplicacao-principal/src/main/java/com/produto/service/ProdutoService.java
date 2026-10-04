@@ -111,10 +111,7 @@ public class ProdutoService {
         return ProdutoResponse.fromEntity(salvo);
     }
 
-    // O tipo (perecível / não perecível) é definido pelo discriminator column e não
-    // pode ser trocado em uma entidade já persistida via SINGLE_TABLE inheritance.
-    // Se o negócio precisar permitir essa troca, o caminho correto é excluir e recriar
-    // o registro, não fazer update in-place.
+
     private void validarTipoNaoAlterado(ProdutoEntity existente, ProdutoRequest request) {
         boolean perecivelSolicitado = Boolean.TRUE.equals(request.getPerecivel());
         boolean eraPerecivel = existente instanceof ProdutoPerecivel;
@@ -146,8 +143,6 @@ public class ProdutoService {
         }
     }
 
-    // ---------- Validação compartilhada ----------
-
     private void validarRegrasPerecivel(ProdutoRequest request) {
         boolean perecivel = Boolean.TRUE.equals(request.getPerecivel());
 
@@ -176,7 +171,6 @@ public class ProdutoService {
     // ---------- Suporte a movimentação de estoque (usado por MovimentacaoService) ----------
     // Expostos aqui (em vez de expor o repository) para que outras camadas de service
     // (ex.: MovimentacaoService) nunca dependam de ProdutoRepository diretamente.
-
     public ProdutoEntity buscarEntidadeParaMovimentacao(Long idProduto) {
         ProdutoEntity produto = produtoRepository.findById(idProduto)
                 .orElseThrow(() -> new RegistroNaoLocalizadoException(

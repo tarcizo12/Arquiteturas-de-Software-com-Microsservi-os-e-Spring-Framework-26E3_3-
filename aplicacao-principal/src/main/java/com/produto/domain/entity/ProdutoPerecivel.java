@@ -2,6 +2,7 @@ package com.produto.domain.entity;
 
 import com.categoria.domain.entity.CategoriaEntity;
 import com.fornecedor.domain.entity.FornecedorEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.Getter;
@@ -13,9 +14,11 @@ import java.time.LocalDate;
 @DiscriminatorValue("PERECIVEL")
 public class ProdutoPerecivel extends ProdutoEntity {
     @Getter @Setter
+    @Column(name = "data_validade")
     private LocalDate dataValidade;
 
     @Getter @Setter
+    @Column(name = "lote", length = 50)
     private String lote;
 
     public ProdutoPerecivel() {}

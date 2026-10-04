@@ -3,23 +3,44 @@ package com.fornecedor.domain.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "fornecedores")
+@Table(name = "fornecedor")
 public class FornecedorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 100)
+    @Column(name = "nome", nullable = false, length = 150)
     private String nome;
 
-    private String descricao;
+    @Column(name = "cnpj", nullable = false, unique = true, length = 18)
+    private String cnpj;
+
+    @Column(name = "telefone", length = 20)
+    private String telefone;
+
+    @Column(name = "email", length = 150)
+    private String email;
+
+    @Column(name = "endereco", length = 255)
+    private String endereco;
 
     public FornecedorEntity() {}
 
-    public FornecedorEntity(String nome, String descricao) {
+    public FornecedorEntity(String nome, String cnpj, String telefone, String email, String endereco) {
         this.nome = nome;
-        this.descricao = descricao;
+        this.cnpj = cnpj;
+        this.telefone = telefone;
+        this.email = email;
+        this.endereco = endereco;
+    }
+
+    public FornecedorEntity(String nome, String cnpj) {
+        this.nome = nome;
+        this.cnpj = cnpj;
+        this.telefone = telefone;
+        this.email = email;
+        this.endereco = endereco;
     }
 
     public Long getId() {
@@ -38,12 +59,36 @@ public class FornecedorEntity {
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getCnpj() {
+        return cnpj;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     @Override
@@ -51,7 +96,10 @@ public class FornecedorEntity {
         return "FornecedorEntity{\n" +
                 "  id=" + id + "\n" +
                 "  nome='" + nome + "'\n" +
-                "  descricao='" + descricao + "'\n" +
+                "  cnpj='" + cnpj + "'\n" +
+                "  telefone='" + telefone + "'\n" +
+                "  email='" + email + "'\n" +
+                "  endereco='" + endereco + "'\n" +
                 '}';
     }
 

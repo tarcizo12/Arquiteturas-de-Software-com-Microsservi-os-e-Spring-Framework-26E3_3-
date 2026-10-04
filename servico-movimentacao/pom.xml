@@ -52,14 +52,12 @@
             <version>2.6.0</version>
         </dependency>
 
-        <!-- H2 - Ambiente de desenvolvimento -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- MySQL - Ambiente de produção -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>

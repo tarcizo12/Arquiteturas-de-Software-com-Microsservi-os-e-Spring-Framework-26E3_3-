@@ -2,6 +2,7 @@ package com.produto.domain.entity;
 
 import com.categoria.domain.entity.CategoriaEntity;
 import com.fornecedor.domain.entity.FornecedorEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.Getter;
@@ -13,17 +14,18 @@ public class ProdutoNaoPerecivel extends ProdutoEntity {
 
     @Getter
     @Setter
+    @Column(name = "garantia_meses")
     private Integer garantiaMeses;
 
     public ProdutoNaoPerecivel() {}
 
     public ProdutoNaoPerecivel(String nome,
-                            String descricao,
-                            Double preco,
-                            Integer quantidadeEstoque,
-                            CategoriaEntity categoria,
-                            FornecedorEntity fornecedor,
-                            Integer garantiaMeses) {
+                               String descricao,
+                               Double preco,
+                               Integer quantidadeEstoque,
+                               CategoriaEntity categoria,
+                               FornecedorEntity fornecedor,
+                               Integer garantiaMeses) {
         super(nome, descricao, preco, quantidadeEstoque, categoria, fornecedor);
         this.garantiaMeses = garantiaMeses;
     }

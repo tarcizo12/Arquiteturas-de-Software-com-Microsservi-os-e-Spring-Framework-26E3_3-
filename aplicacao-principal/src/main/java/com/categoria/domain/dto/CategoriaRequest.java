@@ -23,12 +23,6 @@ public class CategoriaRequest {
         this.descricao = categoria.getDescricao();
     }
 
-    public CategoriaEntity toEntity() {
-        CategoriaEntity categoria = new CategoriaEntity(this.nome, this.descricao);
-        categoria.setId(this.id);
-        return categoria;
-    }
-
     public Long getId() {
         return id;
     }

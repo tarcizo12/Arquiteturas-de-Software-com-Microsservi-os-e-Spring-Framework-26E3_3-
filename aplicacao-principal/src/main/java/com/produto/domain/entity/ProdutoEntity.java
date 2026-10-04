@@ -7,8 +7,8 @@ import lombok.Data;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "tipo_produto", discriminatorType = DiscriminatorType.STRING)
-@Table(name = "produtos")
+@DiscriminatorColumn(name = "tipo_produto", discriminatorType = DiscriminatorType.STRING, length = 20)
+@Table(name = "produto")
 @Data
 public abstract class ProdutoEntity {
 
@@ -16,22 +16,26 @@ public abstract class ProdutoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "nome", nullable = false, length = 150)
     private String nome;
 
-    @ManyToOne
-    @JoinColumn(name = "categoria_id")
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "categoria_id", nullable = false)
     private CategoriaEntity categoria;
 
-    @ManyToOne
-    @JoinColumn(name = "fornecedor_id")
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "fornecedor_id", nullable = false)
     private FornecedorEntity fornecedor;
 
+    @Column(name = "descricao", length = 255)
     private String descricao;
 
+    // Coluna DECIMAL(12,2) no banco
+    @Column(name = "preco", nullable = false)
     private Double preco;
 
-    private Integer quantidadeEstoque;
+    @Column(name = "quantidade_estoque", nullable = false)
+    private Integer quantidadeEstoque = 0;
 
     public ProdutoEntity() {}
 
