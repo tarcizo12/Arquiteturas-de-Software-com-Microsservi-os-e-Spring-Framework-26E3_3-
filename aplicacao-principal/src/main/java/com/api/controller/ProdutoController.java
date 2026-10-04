@@ -55,12 +55,12 @@ public class ProdutoController implements ProdutoControllerDocs {
         return ResponseEntity.ok(produtoService.listarProdutosComEstoqueBaixo(limite));
     }
 
-    @GetMapping("/com/categoria/{categoriaId}")
+    @GetMapping("/categoria/{categoriaId}")
     public ResponseEntity<List<ProdutoResponse>> listarPorCategoria(@PathVariable Long categoriaId) {
         return ResponseEntity.ok(produtoService.listarPorCategoria(categoriaId));
     }
 
-    @GetMapping("/com/fornecedor/{fornecedorId}")
+    @GetMapping("/fornecedor/{fornecedorId}")
     public ResponseEntity<List<ProdutoResponse>> listarPorFornecedor(@PathVariable Long fornecedorId) {
         return ResponseEntity.ok(produtoService.listarPorFornecedor(fornecedorId));
     }
