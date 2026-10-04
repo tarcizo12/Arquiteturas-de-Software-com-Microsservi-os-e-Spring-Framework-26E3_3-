@@ -8,7 +8,7 @@
   },
   "item": [
     {
-      "name": "6 - Serviço de Movimentação - GET histórico",
+      "name": "consulta todos os fornecedores",
       "request": {
         "method": "GET",
         "header": [],
