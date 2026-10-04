@@ -1,0 +1,39 @@
+services:
+
+  mysql-dev:
+    image: mysql:8.4
+    container_name: estoque-mysql-dev
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_dev
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-dev-data:/var/lib/mysql
+      - ./mysql/init-dev.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  mysql-prod:
+    image: mysql:8.4
+    container_name: estoque-mysql-prod
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_prod
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-prod-data:/var/lib/mysql
+      - ./mysql/init-prod.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_prod"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mysql-dev-data:
+  mysql-prod-data:
